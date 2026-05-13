@@ -284,17 +284,14 @@ async function saveStato(){
   setSyncDot('syncing');
   localStorage.setItem('p_stato', JSON.stringify(stato));
   try {
-    const rows = [];
-    const allIds = new Set([...stato.saved.map(String), ...stato.read.map(String), ...Object.keys(stato.hidden)]);
-    allIds.forEach(id => {
-      rows.push({
-        id: String(id),
-        salvata:  stato.saved.includes(id),
-        letta:    stato.read.includes(id),
-        nascosta: id in stato.hidden,
-        aggiornata_il: new Date().toISOString()
-      });
-    });
+    // Usa una mappa per deduplicare: stessa pillola non appare due volte
+    const map = {};
+    (stato.saved||[]).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].salvata=true; });
+    (stato.read||[]).forEach(id  => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].letta=true; });
+    Object.keys(stato.hidden||{}).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].nascosta=true; });
+    const rows = Object.entries(map).map(([id, fields]) => ({
+      id, ...fields, aggiornata_il: new Date().toISOString()
+    }));
     if(rows.length > 0){
       const r = await fetch(SB_URL + '/rest/v1/pillole_stato', {
         method: 'POST',
@@ -310,9 +307,7 @@ async function saveStato(){
     setSyncDot('ok');
     setTimeout(()=>setSyncDot(''),2000);
   } catch(e) {
-    console.error('saveStato error:', e);
     setSyncDot('err');
-    // Mostra errore visibile temporaneamente
     let toast = document.getElementById('err-toast');
     if(!toast){ toast = document.createElement('div'); toast.id='err-toast'; toast.style='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#ef4444;color:#fff;padding:10px 16px;border-radius:10px;font-size:.8rem;z-index:9999;max-width:90vw;word-break:break-all;'; document.body.appendChild(toast); }
     toast.textContent = 'Errore sync: ' + (e && e.message ? e.message : String(e));
