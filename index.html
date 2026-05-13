@@ -285,7 +285,7 @@ async function saveStato(){
   localStorage.setItem('p_stato', JSON.stringify(stato));
   try {
     const rows = [];
-    const allIds = new Set([...stato.saved, ...stato.read, ...Object.keys(stato.hidden)]);
+    const allIds = new Set([...stato.saved.map(String), ...stato.read.map(String), ...Object.keys(stato.hidden)]);
     allIds.forEach(id => {
       rows.push({
         id: String(id),
