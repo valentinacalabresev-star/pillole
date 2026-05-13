@@ -313,6 +313,11 @@ async function saveStato(){
   } catch(e) {
     console.error('saveStato error:', e);
     setSyncDot('err');
+    // Mostra errore visibile temporaneamente
+    let toast = document.getElementById('err-toast');
+    if(!toast){ toast = document.createElement('div'); toast.id='err-toast'; toast.style='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#ef4444;color:#fff;padding:10px 16px;border-radius:10px;font-size:.8rem;z-index:9999;max-width:90vw;word-break:break-all;'; document.body.appendChild(toast); }
+    toast.textContent = 'Errore sync: ' + (e && e.message ? e.message : String(e));
+    setTimeout(()=>{ if(toast) toast.remove(); }, 10000);
   }
 }
 
