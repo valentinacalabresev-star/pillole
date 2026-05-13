@@ -249,13 +249,18 @@ function setSyncDot(mode){
 }
 
 async function loadStato(){
+  function showLoadInfo(source, count){
+    let el = document.getElementById('load-info');
+    if(!el){ el=document.createElement('div'); el.id='load-info'; el.style='position:fixed;top:60px;right:8px;background:#1a1a2e;border:1px solid #ffffff30;color:#a0a0c0;padding:4px 8px;border-radius:6px;font-size:.7rem;z-index:9999;'; document.body.appendChild(el); }
+    el.textContent = source + ' · ' + count + ' righe';
+    setTimeout(()=>{ if(el) el.remove(); }, 5000);
+  }
   try {
     const r = await fetch(SB_URL + '/rest/v1/pillole_stato?select=id,letta,salvata,nascosta,aggiornata_il', {
       headers: SB_HEADERS
     });
-    if(!r.ok) throw new Error('fetch failed');
+    if(!r.ok) throw new Error('fetch ' + r.status);
     const rows = await r.json();
-    // Ricostruisco lo stato dal formato Supabase (righe per pillola)
     stato = { saved:[], read:[], hidden:{}, quiz_wrong:{} };
     const now = Date.now();
     rows.forEach(row => {
@@ -267,9 +272,10 @@ async function loadStato(){
       }
     });
     localStorage.setItem('p_stato', JSON.stringify(stato));
+    showLoadInfo('☁️ Supabase', rows.length);
   } catch(e) {
-    // fallback localStorage
     stato = JSON.parse(localStorage.getItem('p_stato')||'{"saved":[],"read":[],"hidden":{},"quiz_wrong":{}}');
+    showLoadInfo('💾 LocalStorage (err: ' + e.message + ')', (stato.saved||[]).length + (stato.read||[]).length);
   }
 }
 
