@@ -264,11 +264,12 @@ async function loadStato(){
     stato = { saved:[], read:[], hidden:{}, quiz_wrong:{} };
     const now = Date.now();
     rows.forEach(row => {
-      if(row.salvata) stato.saved.push(row.id);
-      if(row.letta)   stato.read.push(row.id);
+      const rid = isNaN(row.id) ? row.id : Number(row.id);
+      if(row.salvata) stato.saved.push(rid);
+      if(row.letta)   stato.read.push(rid);
       if(row.nascosta){
         const ts = row.aggiornata_il ? new Date(row.aggiornata_il).getTime() : now;
-        if(now - ts < HIDDEN_TTL) stato.hidden[row.id] = ts;
+        if(now - ts < HIDDEN_TTL) stato.hidden[rid] = ts;
       }
     });
     localStorage.setItem('p_stato', JSON.stringify(stato));
