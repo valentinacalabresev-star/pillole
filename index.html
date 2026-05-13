@@ -283,13 +283,12 @@ async function sbUpsert(id, fields){
 async function saveStato(){
   setSyncDot('syncing');
   localStorage.setItem('p_stato', JSON.stringify(stato));
-  // Supabase: invia solo le righe "sporche" (dirty tracking semplificato — invia tutto lo stato)
   try {
     const rows = [];
     const allIds = new Set([...stato.saved, ...stato.read, ...Object.keys(stato.hidden)]);
     allIds.forEach(id => {
       rows.push({
-        id,
+        id: String(id),
         salvata:  stato.saved.includes(id),
         letta:    stato.read.includes(id),
         nascosta: id in stato.hidden,
@@ -299,15 +298,20 @@ async function saveStato(){
     if(rows.length > 0){
       const r = await fetch(SB_URL + '/rest/v1/pillole_stato', {
         method: 'POST',
-        headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates' },
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates' },
         body: JSON.stringify(rows)
       });
-      if(!r.ok) throw new Error('save failed');
+      if(!r.ok){
+        const errText = await r.text();
+        console.error('Supabase save error:', r.status, errText);
+        throw new Error('save failed');
+      }
     }
     dirty = false;
     setSyncDot('ok');
     setTimeout(()=>setSyncDot(''),2000);
   } catch(e) {
+    console.error('saveStato error:', e);
     setSyncDot('err');
   }
 }
