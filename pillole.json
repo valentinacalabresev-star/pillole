@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "data": "2026-05-13",
+    "categoria": "Marketing",
+    "titolo": "Il paradosso della scelta: perché troppe opzioni paralizzano il cliente",
+    "contenuto": "Nel 1995 lo psicologo Barry Schwartz condusse un esperimento semplice ma rivoluzionario: in un supermercato mise due bancarelle di marmellate. Una con 6 gusti, l'altra con 24. La bancarella con 24 attirava più persone, ma quella con 6 vendeva 10 volte di più.\n\nQuesta è la legge del paradosso della scelta: più opzioni offri, più il cervello del cliente si blocca in un loop decisionale. Il motivo è neurologico — la corteccia prefrontale, responsabile delle decisioni, si sovraccarica e la risposta istintiva è... non scegliere nulla.\n\nIn marketing si traduce così: ogni volta che allarghi troppo il menu, la landing page, il catalogo prodotti o le CTA, stai inconsapevolmente riducendo le conversioni. I brand che convertono di più spesso fanno una cosa sola: riducono le opzioni, guidano la scelta, danno un consiglio esplicito.\n\nLa prossima volta che devi strutturare un'offerta o una pagina, chiediti: sto semplificando o sto esponendo tutto quello che ho? La risposta cambia il risultato."
+  },
+  {
+    "id": 2,
+    "data": "2026-05-13",
+    "categoria": "Psicologia",
+    "titolo": "L'effetto Dunning-Kruger: perché i principianti si sentono esperti",
+    "contenuto": "David Dunning e Justin Kruger nel 1999 pubblicarono uno studio che spiegava un fenomeno che tutti abbiamo vissuto: le persone con poca competenza in un campo tendono a sovrastimare le proprie capacità, mentre gli esperti veri spesso si sottovalutano.\n\nIl meccanismo è questo: per riconoscere i propri errori serve la stessa competenza necessaria per non commetterli. Chi sa poco, non sa nemmeno cosa non sa — e questo crea una falsa sicurezza.\n\nNella curva del Dunning-Kruger ci sono quattro fasi: il 'picco della stupidità' (poca esperienza, alta fiducia), la 'valle della disperazione' (cominci a capire quanto non sai), il 'pendio dell'illuminazione' (crescita reale con consapevolezza), e il 'plateau della padronanza' (alta competenza, stima di sé calibrata).\n\nPerché conta nella vita professionale? Perché riconoscere in quale fase sei — tu e le persone con cui lavori — ti dà un vantaggio enorme. Chi è nel picco ha bisogno di essere sfidato, non lusingato. Chi è nella valle ha bisogno di supporto, non di critica. E tu, dove sei?"
+  },
+  {
+    "id": 3,
+    "data": "2026-05-13",
+    "categoria": "Business",
+    "titolo": "Il moat competitivo: cosa protegge davvero un'azienda dalla concorrenza",
+    "contenuto": "Warren Buffett usò per primo il termine 'moat' (fossato) per descrivere il vantaggio competitivo di un'azienda — quella caratteristica che la protegge dai competitor come un fossato protegge un castello.\n\nEsistono cinque tipi di moat principali: gli effetti di rete (più utenti = più valore, come LinkedIn o WhatsApp), i costi di switching (cambiare fornitore è così costoso o complicato che i clienti restano, come i software ERP aziendali), le economie di scala (più produci, meno ti costa, come Amazon), i beni intangibili (brevetti, brand, licenze — come Coca-Cola o Nike), e il vantaggio di costo strutturale (accesso a risorse o processi impossibili da replicare).\n\nPer chi lavora in strategia, la domanda da farsi non è 'siamo i migliori adesso?' ma 'cosa rende difficile per qualcun altro prendere il nostro posto tra 5 anni?'. Senza fossato, ogni vantaggio è temporaneo.\n\nAnalizzare il moat di un'azienda — la tua o quella di un cliente — è uno degli esercizi più utili in assoluto per capire dove investire e dove difendersi."
+  },
+  {
+    "id": 4,
+    "data": "2026-05-13",
+    "categoria": "AI",
+    "titolo": "Cos'è un agente AI e perché sta cambiando tutto",
+    "contenuto": "Fino a poco tempo fa, i modelli di AI come ChatGPT erano strumenti reattivi: rispondevano a domande, generavano testi, ma non facevano nulla da soli. Un agente AI è diverso: è un sistema che riceve un obiettivo, pianifica i passi necessari, usa strumenti (ricerca web, email, codice, API) e porta il lavoro a termine in autonomia.\n\nL'analogia migliore è la differenza tra un consulente che ti dà consigli e un collaboratore che esegue. Gli agenti AI 'eseguono': prenotano riunioni, mandano email, aggiornano database, cercano informazioni e prendono micro-decisioni lungo il percorso.\n\nNel marketing concreto: un agente può monitorare i competitor ogni giorno, scrivere report, postare contenuti, rispondere ai clienti e analizzare le performance — tutto in parallelo e in autonomia.\n\nLa sfida non è tecnologica ma strategica: chi saprà progettare workflow agentici efficaci avrà un moltiplicatore di produttività senza precedenti. Chi non li capisce delegherà a chi li usa. Questo è il vero cambio di paradigma del 2025-2026."
+  },
+  {
+    "id": 5,
+    "data": "2026-05-13",
+    "categoria": "Scienze Comportamentali",
+    "titolo": "Il bias di conferma: il filtro invisibile che distorce la realtà",
+    "contenuto": "Il bias di conferma è la tendenza del cervello a cercare, interpretare e ricordare le informazioni in modo che confermino ciò che già crede. Non è pigrizia mentale — è un meccanismo evolutivo: elaborare ogni informazione da zero sarebbe troppo costoso energeticamente.\n\nIl problema è che questo filtro invisibile distorce sistematicamente le decisioni. Un manager convinto che una campagna funzioni ignorerà i dati negativi e amplificherà quelli positivi. Un consumatore che ha scelto un brand tenderà a trovare conferme di aver fatto bene — anche se i segnali dicono il contrario.\n\nCome difendersi? Tre tattiche concrete: cercare attivamente dati che contraddicono la tua ipotesi (falsificazione), chiedere opinioni a persone con prospettive diverse (devil's advocate), e separare il momento di raccolta dati dal momento di interpretazione.\n\nIn strategia, il bias di conferma è responsabile di molti flop: prodotti lanciati su ricerche di mercato mal interpretate, campagne continuate troppo a lungo, mercati sottovalutati. Riconoscerlo in te stesso è la prima difesa."
+  }
+]
