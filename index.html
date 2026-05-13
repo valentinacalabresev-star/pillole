@@ -349,6 +349,37 @@
 
     .card.expanded .toggle-icon { transform: rotate(180deg); }
 
+    /* FONTE */
+    .card-fonte {
+      display: none;
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: var(--surface2);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .card.expanded .card-fonte { display: flex; align-items: center; gap: 8px; }
+
+    .fonte-label {
+      font-size: 0.7rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .fonte-link {
+      font-size: 0.75rem;
+      color: var(--accent2);
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .fonte-link:hover { text-decoration: underline; }
+
     /* SAVED VIEW */
     .saved-view {
       display: none;
@@ -570,6 +601,11 @@ function buildCard(p, index) {
     videoEmbed = `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${p.video_id}?rel=0" allowfullscreen loading="lazy"></iframe></div>`;
   }
 
+  let fonteHtml = '';
+  if (p.fonte) {
+    fonteHtml = `<div class="card-fonte"><span class="fonte-label">📖 Fonte</span><a class="fonte-link" href="${p.fonte.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${p.fonte.nome}</a></div>`;
+  }
+
   card.innerHTML = `
     <div class="card-bar ${cc}"></div>
     <div class="card-inner">
@@ -588,6 +624,7 @@ function buildCard(p, index) {
       <div class="card-preview">${p.contenuto.split('\n\n')[0]}</div>
       <div class="card-body">${p.contenuto}</div>
       ${videoEmbed}
+      ${fonteHtml}
       <div class="card-footer">
         <span class="read-more">${isVideo ? 'Guarda & leggi' : 'Leggi tutto'}</span>
         <div class="toggle-icon">▾</div>
