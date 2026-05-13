@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pillole-v3';
+const CACHE_NAME = 'pillole-v4';
 const ASSETS = ['/', '/index.html', '/pillole.json'];
 
 self.addEventListener('install', e => {
