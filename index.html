@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillole · Valentina</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0f0f13;
+      --surface: #1a1a22;
+      --surface2: #22222e;
+      --border: #2e2e3e;
+      --text: #f0f0f5;
+      --text-muted: #8888a8;
+      --accent: #a78bfa;
+
+      --cat-marketing: #f472b6;
+      --cat-ai: #38bdf8;
+      --cat-psicologia: #fb923c;
+      --cat-business: #4ade80;
+      --cat-scienze: #e879f9;
+      --cat-finanza: #facc15;
+      --cat-cultura: #f87171;
+      --cat-altro: #94a3b8;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,15,19,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px 12px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span { color: var(--text-muted); font-weight: 400; font-size: 0.85rem; margin-left: 6px; }
+
+    .pill-count {
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    /* FILTRI */
+    .filters {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+
+    .filters::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .filter-btn:active { transform: scale(0.95); }
+    .filter-btn.active { color: var(--bg); font-weight: 600; border-color: transparent; }
+
+    /* FEED */
+    .feed {
+      padding: 16px 16px 100px;
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.15s;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:active { transform: scale(0.98); }
+    .card.expanded { border-color: var(--accent); }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .cat-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .card-date {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card-preview {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-body {
+      display: none;
+      font-size: 0.875rem;
+      color: #c8c8e0;
+      line-height: 1.7;
+      margin-top: 12px;
+      white-space: pre-line;
+    }
+
+    .card.expanded .card-preview { display: none; }
+    .card.expanded .card-body { display: block; }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .read-more {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .toggle-icon {
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card.expanded .toggle-icon { transform: rotate(180deg); }
+
+    /* EMPTY STATE */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .empty p { font-size: 0.9rem; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="logo">pillole ✦ <span>il tuo feed</span></div>
+    <div class="pill-count" id="pill-count">— pillole</div>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="tutti">Tutti</button>
+  </div>
+</div>
+
+<div class="feed" id="feed"></div>
+
+<script>
+const COLORS = {
+  'Marketing': { bg: '#f472b6', text: '#1a0010' },
+  'AI': { bg: '#38bdf8', text: '#001a28' },
+  'Psicologia': { bg: '#fb923c', text: '#1a0a00' },
+  'Business': { bg: '#4ade80', text: '#001a08' },
+  'Scienze Comportamentali': { bg: '#e879f9', text: '#1a001a' },
+  'Finanza': { bg: '#facc15', text: '#1a1200' },
+  'Cultura': { bg: '#f87171', text: '#1a0000' },
+};
+
+function getColor(cat) {
+  return COLORS[cat] || { bg: '#94a3b8', text: '#0a0f1a' };
+}
+
+function formatDate(d) {
+  const [y, m, g] = d.split('-');
+  const months = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  return g + ' ' + months[parseInt(m)-1] + ' ' + y;
+}
+
+let pillole = [];
+let activeFilter = 'tutti';
+
+async function loadPillole() {
+  const res = await fetch('pillole.json?v=' + Date.now());
+  pillole = await res.json();
+  pillole.sort((a, b) => b.id - a.id);
+  buildFilters();
+  renderFeed();
+}
+
+function buildFilters() {
+  const cats = [...new Set(pillole.map(p => p.categoria))];
+  const container = document.getElementById('filters');
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.cat = cat;
+    btn.textContent = cat;
+    const c = getColor(cat);
+    btn.addEventListener('click', () => setFilter(cat));
+    container.appendChild(btn);
+  });
+}
+
+function setFilter(cat) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const isActive = b.dataset.cat === cat;
+    b.classList.toggle('active', isActive);
+    if (isActive && cat !== 'tutti') {
+      const c = getColor(cat);
+      b.style.background = c.bg;
+      b.style.color = c.text;
+    } else if (isActive) {
+      b.style.background = '#a78bfa';
+      b.style.color = '#0f0a1a';
+    } else {
+      b.style.background = '';
+      b.style.color = '';
+    }
+  });
+  renderFeed();
+}
+
+function renderFeed() {
+  const filtered = activeFilter === 'tutti' ? pillole : pillole.filter(p => p.categoria === activeFilter);
+  const feed = document.getElementById('feed');
+  const count = document.getElementById('pill-count');
+  count.textContent = filtered.length + ' pillol' + (filtered.length === 1 ? 'a' : 'e');
+
+  if (filtered.length === 0) {
+    feed.innerHTML = '<div class="empty"><div class="empty-icon">🌱</div><p>Nessuna pillola in questa categoria.<br>Torna presto!</p></div>';
+    return;
+  }
+
+  feed.innerHTML = '';
+  filtered.forEach(p => {
+    const c = getColor(p.categoria);
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-top">
+        <span class="cat-badge" style="background:${c.bg};color:${c.text}">${p.categoria}</span>
+        <span class="card-date">${formatDate(p.data)}</span>
+      </div>
+      <div class="card-title">${p.titolo}</div>
+      <div class="card-preview">${p.contenuto}</div>
+      <div class="card-body">${p.contenuto}</div>
+      <div class="card-footer">
+        <span class="read-more">Leggi</span>
+        <span class="toggle-icon">↓</span>
+      </div>
+    `;
+    card.addEventListener('click', () => {
+      card.classList.toggle('expanded');
+      card.querySelector('.read-more').textContent = card.classList.contains('expanded') ? 'Chiudi' : 'Leggi';
+    });
+    feed.appendChild(card);
+  });
+}
+
+loadPillole();
+
+// Colora il filtro "Tutti" di default
+document.querySelector('[data-cat="tutti"]').style.background = '#a78bfa';
+document.querySelector('[data-cat="tutti"]').style.color = '#0f0a1a';
+</script>
+
+</body>
+</html>
