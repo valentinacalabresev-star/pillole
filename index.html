@@ -2,46 +2,53 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Pillole · Valentina</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     :root {
-      --bg: #0f0f13;
-      --surface: #1a1a22;
-      --surface2: #22222e;
-      --border: #2e2e3e;
-      --text: #f0f0f5;
-      --text-muted: #8888a8;
-      --accent: #a78bfa;
-
-      --cat-marketing: #f472b6;
-      --cat-ai: #38bdf8;
-      --cat-psicologia: #fb923c;
-      --cat-business: #4ade80;
-      --cat-scienze: #e879f9;
-      --cat-finanza: #facc15;
-      --cat-cultura: #f87171;
-      --cat-altro: #94a3b8;
+      --bg: #080810;
+      --surface: #10101e;
+      --surface2: #18182a;
+      --surface3: #20203a;
+      --border: #ffffff12;
+      --border2: #ffffff20;
+      --text: #f0f0fa;
+      --text2: #a0a0c0;
+      --text3: #6060a0;
+      --accent: #7c3aed;
+      --accent2: #a78bfa;
+      --glow: rgba(124,58,237,0.15);
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
       min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* BG GRADIENT */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; left: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     /* HEADER */
     .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(15,15,19,0.92);
-      backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,8,16,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
-      padding: 16px 20px 12px;
+      padding: 14px 18px 0;
     }
 
     .header-top {
@@ -52,32 +59,67 @@
     }
 
     .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+
+    .logo-text {
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a78bfa, #e879f9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: -0.5px;
     }
 
-    .logo span { color: var(--text-muted); font-weight: 400; font-size: 0.85rem; margin-left: 6px; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .saved-btn {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 5px 12px;
+      color: var(--text2);
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .saved-btn.has-saved { color: #facc15; border-color: #facc1540; }
+    .saved-btn:active { transform: scale(0.95); }
 
     .pill-count {
       background: var(--surface2);
-      color: var(--text-muted);
-      font-size: 0.75rem;
+      color: var(--text3);
+      font-size: 0.72rem;
       padding: 4px 10px;
       border-radius: 20px;
       border: 1px solid var(--border);
     }
 
-    /* FILTRI */
+    /* FILTERS */
     .filters {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       overflow-x: auto;
       scrollbar-width: none;
-      padding-bottom: 2px;
+      padding: 0 0 14px;
     }
-
     .filters::-webkit-scrollbar { display: none; }
 
     .filter-btn {
@@ -85,45 +127,65 @@
       padding: 6px 14px;
       border-radius: 20px;
       border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-muted);
-      font-size: 0.8rem;
+      background: transparent;
+      color: var(--text3);
+      font-size: 0.78rem;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.2s;
       white-space: nowrap;
     }
 
     .filter-btn:active { transform: scale(0.95); }
-    .filter-btn.active { color: var(--bg); font-weight: 600; border-color: transparent; }
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
 
     /* FEED */
     .feed {
-      padding: 16px 16px 100px;
+      padding: 20px 16px 120px;
       max-width: 680px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      position: relative;
+      z-index: 1;
     }
 
     /* CARD */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
+      border-radius: 20px;
+      overflow: hidden;
       cursor: pointer;
-      transition: transform 0.15s, border-color 0.15s;
-      animation: fadeIn 0.3s ease;
+      transition: transform 0.15s, border-color 0.2s, box-shadow 0.2s;
+      animation: slideUp 0.35s ease both;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .card:active { transform: scale(0.98); }
-    .card.expanded { border-color: var(--accent); }
+
+    .card.expanded {
+      border-color: var(--border2);
+      box-shadow: 0 0 0 1px var(--accent)30, 0 8px 40px rgba(124,58,237,0.12);
+    }
+
+    /* CARD COLOR BAR */
+    .card-bar {
+      height: 3px;
+      width: 100%;
+    }
+
+    .card-inner { padding: 16px 18px 14px; }
 
     .card-top {
       display: flex;
@@ -132,19 +194,51 @@
       margin-bottom: 10px;
     }
 
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .cat-badge {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 12px;
-      letter-spacing: 0.5px;
+      padding: 3px 9px;
+      border-radius: 10px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
     }
 
-    .card-date {
-      font-size: 0.72rem;
-      color: var(--text-muted);
+    .type-badge {
+      font-size: 0.68rem;
+      color: var(--text3);
+      background: var(--surface2);
+      padding: 3px 8px;
+      border-radius: 8px;
     }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .save-btn {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .save-btn.saved { background: #facc1520; border-color: #facc1540; }
+    .save-btn:active { transform: scale(0.85); }
+
+    .card-date { font-size: 0.7rem; color: var(--text3); }
 
     .card-title {
       font-size: 1rem;
@@ -152,12 +246,46 @@
       line-height: 1.35;
       margin-bottom: 10px;
       color: var(--text);
+      letter-spacing: -0.2px;
     }
 
+    /* VIDEO THUMBNAIL */
+    .video-thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: var(--surface2);
+    }
+
+    .video-thumb-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .play-btn {
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    /* CARD CONTENT */
     .card-preview {
       font-size: 0.875rem;
-      color: var(--text-muted);
-      line-height: 1.55;
+      color: var(--text2);
+      line-height: 1.6;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -167,93 +295,328 @@
     .card-body {
       display: none;
       font-size: 0.875rem;
-      color: #c8c8e0;
-      line-height: 1.7;
-      margin-top: 12px;
+      color: #c0c0e0;
+      line-height: 1.75;
       white-space: pre-line;
     }
 
     .card.expanded .card-preview { display: none; }
     .card.expanded .card-body { display: block; }
 
+    /* VIDEO EMBED */
+    .video-embed {
+      display: none;
+      margin-top: 14px;
+    }
+
+    .card.expanded .video-embed {
+      display: block;
+    }
+
+    .video-embed iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      border: none;
+    }
+
+    /* CARD FOOTER */
     .card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 12px;
-      padding-top: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
       border-top: 1px solid var(--border);
     }
 
     .read-more {
       font-size: 0.78rem;
-      color: var(--accent);
+      color: var(--accent2);
       font-weight: 600;
     }
 
     .toggle-icon {
-      color: var(--text-muted);
-      font-size: 1rem;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text2);
+      font-size: 11px;
       transition: transform 0.2s;
     }
 
     .card.expanded .toggle-icon { transform: rotate(180deg); }
 
-    /* EMPTY STATE */
+    /* SAVED VIEW */
+    .saved-view {
+      display: none;
+      padding: 20px 16px 120px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .saved-view.active { display: block; }
+    .feed.hidden { display: none; }
+
+    .saved-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .saved-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .back-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* EMPTY */
     .empty {
       text-align: center;
       padding: 60px 20px;
-      color: var(--text-muted);
+      color: var(--text3);
     }
 
     .empty-icon { font-size: 2.5rem; margin-bottom: 12px; }
-    .empty p { font-size: 0.9rem; line-height: 1.5; }
+    .empty p { font-size: 0.9rem; line-height: 1.6; }
+
+    /* CAT COLORS */
+    .c-marketing   { background: linear-gradient(135deg,#f472b6,#ec4899); }
+    .c-ai          { background: linear-gradient(135deg,#38bdf8,#0ea5e9); }
+    .c-psicologia  { background: linear-gradient(135deg,#fb923c,#f97316); }
+    .c-business    { background: linear-gradient(135deg,#4ade80,#22c55e); }
+    .c-scienze     { background: linear-gradient(135deg,#e879f9,#d946ef); }
+    .c-neuromark   { background: linear-gradient(135deg,#f472b6,#a855f7); }
+    .c-finanza     { background: linear-gradient(135deg,#facc15,#eab308); }
+    .c-digital     { background: linear-gradient(135deg,#60a5fa,#3b82f6); }
+    .c-storia      { background: linear-gradient(135deg,#f87171,#ef4444); }
+    .c-comunicaz   { background: linear-gradient(135deg,#34d399,#10b981); }
+    .c-performance { background: linear-gradient(135deg,#a78bfa,#8b5cf6); }
+    .c-filosofia   { background: linear-gradient(135deg,#fbbf24,#f59e0b); }
+    .c-arte        { background: linear-gradient(135deg,#f9a8d4,#ec4899); }
+    .c-altro       { background: linear-gradient(135deg,#94a3b8,#64748b); }
   </style>
 </head>
 <body>
 
 <div class="header">
   <div class="header-top">
-    <div class="logo">pillole ✦ <span>il tuo feed</span></div>
-    <div class="pill-count" id="pill-count">— pillole</div>
+    <div class="logo">
+      <div class="logo-icon">✦</div>
+      <div class="logo-text">pillole</div>
+    </div>
+    <div class="header-right">
+      <button class="saved-btn" id="savedBtn" onclick="toggleSaved()">
+        <span>🔖</span> <span id="savedBtnLabel">Salvate</span>
+      </button>
+    </div>
   </div>
   <div class="filters" id="filters">
-    <button class="filter-btn active" data-cat="tutti">Tutti</button>
+    <button class="filter-btn active" data-cat="tutti" onclick="setFilter('tutti')">✦ Tutti</button>
   </div>
 </div>
 
 <div class="feed" id="feed"></div>
 
+<div class="saved-view" id="savedView">
+  <div class="saved-header">
+    <button class="back-btn" onclick="toggleSaved()">←</button>
+    <div class="saved-title">🔖 Salvate</div>
+    <div class="pill-count" id="savedCount">0</div>
+  </div>
+  <div id="savedFeed"></div>
+</div>
+
 <script>
-const COLORS = {
-  'Marketing': { bg: '#f472b6', text: '#1a0010' },
-  'AI': { bg: '#38bdf8', text: '#001a28' },
-  'Psicologia': { bg: '#fb923c', text: '#1a0a00' },
-  'Business': { bg: '#4ade80', text: '#001a08' },
-  'Scienze Comportamentali': { bg: '#e879f9', text: '#1a001a' },
-  'Finanza': { bg: '#facc15', text: '#1a1200' },
-  'Cultura': { bg: '#f87171', text: '#1a0000' },
+const CAT_CLASS = {
+  'Marketing': 'c-marketing',
+  'AI': 'c-ai',
+  'Psicologia': 'c-psicologia',
+  'Business': 'c-business',
+  'Scienze Comportamentali': 'c-scienze',
+  'Neuromarketing': 'c-neuromark',
+  'Finanza': 'c-finanza',
+  'Digital': 'c-digital',
+  'Storia & Geopolitica': 'c-storia',
+  'Comunicazione': 'c-comunicaz',
+  'Performance': 'c-performance',
+  'Filosofia': 'c-filosofia',
+  'Arte & Design': 'c-arte',
 };
 
-function getColor(cat) {
-  return COLORS[cat] || { bg: '#94a3b8', text: '#0a0f1a' };
+const CAT_COLORS = {
+  'Marketing': { bg:'#f472b620', text:'#f472b6' },
+  'AI': { bg:'#38bdf820', text:'#38bdf8' },
+  'Psicologia': { bg:'#fb923c20', text:'#fb923c' },
+  'Business': { bg:'#4ade8020', text:'#4ade80' },
+  'Scienze Comportamentali': { bg:'#e879f920', text:'#e879f9' },
+  'Neuromarketing': { bg:'#f472b620', text:'#f472b6' },
+  'Finanza': { bg:'#facc1520', text:'#facc15' },
+  'Digital': { bg:'#60a5fa20', text:'#60a5fa' },
+  'Storia & Geopolitica': { bg:'#f8717120', text:'#f87171' },
+  'Comunicazione': { bg:'#34d39920', text:'#34d399' },
+  'Performance': { bg:'#a78bfa20', text:'#a78bfa' },
+  'Filosofia': { bg:'#fbbf2420', text:'#fbbf24' },
+  'Arte & Design': { bg:'#f9a8d420', text:'#ec4899' },
+};
+
+function getCatStyle(cat) {
+  return CAT_COLORS[cat] || { bg:'#94a3b820', text:'#94a3b8' };
+}
+
+function getCatClass(cat) {
+  return CAT_CLASS[cat] || 'c-altro';
 }
 
 function formatDate(d) {
-  const [y, m, g] = d.split('-');
+  const [y,m,g] = d.split('-');
   const months = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
-  return g + ' ' + months[parseInt(m)-1] + ' ' + y;
+  return g + ' ' + months[parseInt(m)-1];
 }
 
 let pillole = [];
 let activeFilter = 'tutti';
+let savedIds = JSON.parse(localStorage.getItem('pillole_saved') || '[]');
+let showingSaved = false;
+
+function isSaved(id) { return savedIds.includes(id); }
+
+function toggleSave(id, btn, e) {
+  e.stopPropagation();
+  if (isSaved(id)) {
+    savedIds = savedIds.filter(x => x !== id);
+  } else {
+    savedIds.push(id);
+  }
+  localStorage.setItem('pillole_saved', JSON.stringify(savedIds));
+  updateSaveBtn(btn, id);
+  updateSavedIndicator();
+  if (showingSaved) renderSaved();
+}
+
+function updateSaveBtn(btn, id) {
+  if (isSaved(id)) {
+    btn.textContent = '🔖';
+    btn.classList.add('saved');
+  } else {
+    btn.textContent = '🤍';
+    btn.classList.remove('saved');
+  }
+}
+
+function updateSavedIndicator() {
+  const btn = document.getElementById('savedBtn');
+  const label = document.getElementById('savedBtnLabel');
+  if (savedIds.length > 0) {
+    btn.classList.add('has-saved');
+    label.textContent = 'Salvate (' + savedIds.length + ')';
+  } else {
+    btn.classList.remove('has-saved');
+    label.textContent = 'Salvate';
+  }
+}
+
+function toggleSaved() {
+  showingSaved = !showingSaved;
+  document.getElementById('feed').classList.toggle('hidden', showingSaved);
+  document.getElementById('savedView').classList.toggle('active', showingSaved);
+  if (showingSaved) renderSaved();
+}
+
+function renderSaved() {
+  const items = pillole.filter(p => isSaved(p.id));
+  const container = document.getElementById('savedFeed');
+  document.getElementById('savedCount').textContent = items.length + ' pillol' + (items.length===1?'a':'e');
+  if (items.length === 0) {
+    container.innerHTML = '<div class="empty"><div class="empty-icon">🔖</div><p>Nessuna pillola salvata.<br>Tappa il segnalibro per aggiungerne.</p></div>';
+    return;
+  }
+  container.innerHTML = '';
+  items.forEach((p,i) => container.appendChild(buildCard(p, i)));
+}
+
+function buildCard(p, index) {
+  const cs = getCatStyle(p.categoria);
+  const cc = getCatClass(p.categoria);
+  const saved = isSaved(p.id);
+  const isVideo = p.tipo === 'video';
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.style.animationDelay = (index * 0.04) + 's';
+
+  let thumbHtml = '';
+  if (isVideo && p.video_thumb) {
+    thumbHtml = `
+      <div class="video-thumb-wrap">
+        <img src="${p.video_thumb}" alt="" loading="lazy">
+        <div class="play-overlay"><div class="play-btn">▶</div></div>
+      </div>`;
+  }
+
+  let videoEmbed = '';
+  if (isVideo && p.video_id) {
+    videoEmbed = `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${p.video_id}?rel=0" allowfullscreen loading="lazy"></iframe></div>`;
+  }
+
+  card.innerHTML = `
+    <div class="card-bar ${cc}"></div>
+    <div class="card-inner">
+      <div class="card-top">
+        <div class="card-meta">
+          <span class="cat-badge" style="background:${cs.bg};color:${cs.text}">${p.categoria}</span>
+          ${isVideo ? '<span class="type-badge">▶ video</span>' : ''}
+        </div>
+        <div class="card-actions">
+          <button class="save-btn ${saved?'saved':''}" data-id="${p.id}">${saved?'🔖':'🤍'}</button>
+          <span class="card-date">${formatDate(p.data)}</span>
+        </div>
+      </div>
+      <div class="card-title">${p.titolo}</div>
+      ${thumbHtml}
+      <div class="card-preview">${p.contenuto.split('\n\n')[0]}</div>
+      <div class="card-body">${p.contenuto}</div>
+      ${videoEmbed}
+      <div class="card-footer">
+        <span class="read-more">${isVideo ? 'Guarda & leggi' : 'Leggi tutto'}</span>
+        <div class="toggle-icon">▾</div>
+      </div>
+    </div>
+  `;
+
+  // Save button
+  const saveBtn = card.querySelector('.save-btn');
+  saveBtn.addEventListener('click', (e) => toggleSave(p.id, saveBtn, e));
+
+  // Expand
+  card.addEventListener('click', () => {
+    card.classList.toggle('expanded');
+    card.querySelector('.read-more').textContent = card.classList.contains('expanded')
+      ? 'Chiudi'
+      : (isVideo ? 'Guarda & leggi' : 'Leggi tutto');
+  });
+
+  return card;
+}
 
 async function loadPillole() {
   const res = await fetch('pillole.json?v=' + Date.now());
   pillole = await res.json();
-  pillole.sort((a, b) => b.id - a.id);
+  pillole.sort((a,b) => b.id - a.id);
   buildFilters();
   renderFeed();
+  updateSavedIndicator();
 }
 
 function buildFilters() {
@@ -264,8 +627,7 @@ function buildFilters() {
     btn.className = 'filter-btn';
     btn.dataset.cat = cat;
     btn.textContent = cat;
-    const c = getColor(cat);
-    btn.addEventListener('click', () => setFilter(cat));
+    btn.onclick = () => setFilter(cat);
     container.appendChild(btn);
   });
 }
@@ -273,19 +635,7 @@ function buildFilters() {
 function setFilter(cat) {
   activeFilter = cat;
   document.querySelectorAll('.filter-btn').forEach(b => {
-    const isActive = b.dataset.cat === cat;
-    b.classList.toggle('active', isActive);
-    if (isActive && cat !== 'tutti') {
-      const c = getColor(cat);
-      b.style.background = c.bg;
-      b.style.color = c.text;
-    } else if (isActive) {
-      b.style.background = '#a78bfa';
-      b.style.color = '#0f0a1a';
-    } else {
-      b.style.background = '';
-      b.style.color = '';
-    }
+    b.classList.toggle('active', b.dataset.cat === cat);
   });
   renderFeed();
 }
@@ -293,46 +643,17 @@ function setFilter(cat) {
 function renderFeed() {
   const filtered = activeFilter === 'tutti' ? pillole : pillole.filter(p => p.categoria === activeFilter);
   const feed = document.getElementById('feed');
-  const count = document.getElementById('pill-count');
-  count.textContent = filtered.length + ' pillol' + (filtered.length === 1 ? 'a' : 'e');
 
   if (filtered.length === 0) {
-    feed.innerHTML = '<div class="empty"><div class="empty-icon">🌱</div><p>Nessuna pillola in questa categoria.<br>Torna presto!</p></div>';
+    feed.innerHTML = '<div class="empty"><div class="empty-icon">🌱</div><p>Nessuna pillola qui.<br>Torna presto!</p></div>';
     return;
   }
 
   feed.innerHTML = '';
-  filtered.forEach(p => {
-    const c = getColor(p.categoria);
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <div class="card-top">
-        <span class="cat-badge" style="background:${c.bg};color:${c.text}">${p.categoria}</span>
-        <span class="card-date">${formatDate(p.data)}</span>
-      </div>
-      <div class="card-title">${p.titolo}</div>
-      <div class="card-preview">${p.contenuto}</div>
-      <div class="card-body">${p.contenuto}</div>
-      <div class="card-footer">
-        <span class="read-more">Leggi</span>
-        <span class="toggle-icon">↓</span>
-      </div>
-    `;
-    card.addEventListener('click', () => {
-      card.classList.toggle('expanded');
-      card.querySelector('.read-more').textContent = card.classList.contains('expanded') ? 'Chiudi' : 'Leggi';
-    });
-    feed.appendChild(card);
-  });
+  filtered.forEach((p,i) => feed.appendChild(buildCard(p,i)));
 }
 
 loadPillole();
-
-// Colora il filtro "Tutti" di default
-document.querySelector('[data-cat="tutti"]').style.background = '#a78bfa';
-document.querySelector('[data-cat="tutti"]').style.color = '#0f0a1a';
 </script>
-
 </body>
 </html>
