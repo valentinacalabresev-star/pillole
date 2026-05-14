@@ -60,6 +60,8 @@
 
     .view { display:none; padding:16px 16px 20px; max-width:680px; margin:0 auto; position:relative; z-index:1; }
     .view.active { display:block; }
+    /* News view needs light bg and no padding override from dark theme */
+    #view-news.active { background:#f8f7f4; min-height:calc(100vh - 100px); padding:16px 16px 0; }
 
     .cards-list { display:flex; flex-direction:column; gap:14px; }
     .card { background:var(--surface); border:1px solid var(--border); border-radius:20px; overflow:hidden; cursor:pointer; transition:transform .15s,border-color .2s,box-shadow .2s; animation:slideUp .35s ease both; }
@@ -147,6 +149,49 @@
     .score-emoji { font-size:3rem; margin-bottom:10px; }
     .score-title { font-size:1.3rem; font-weight:800; margin-bottom:6px; }
     .score-sub { font-size:.875rem; color:var(--text2); margin-bottom:20px; line-height:1.5; }
+
+    /* ── NEWS VIEW ─────────────────────────────────────────────────── */
+    #view-news { background:#f8f7f4; padding:16px; }
+    .news-header { margin-bottom:16px; }
+    .news-title { font-size:1.4rem; font-weight:800; color:#1a1a1a; letter-spacing:-.3px; margin-bottom:12px; }
+    .news-filters { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px; flex-wrap:nowrap; }
+    .news-filters::-webkit-scrollbar { display:none; }
+    .news-filter-btn { flex-shrink:0; padding:5px 13px; border-radius:20px; border:1px solid #d4d4d4; background:#fff; color:#666; font-size:.75rem; font-weight:500; cursor:pointer; transition:all .2s; white-space:nowrap; }
+    .news-filter-btn.active { background:#7c3aed; border-color:#7c3aed; color:#fff; font-weight:700; }
+    .news-list { display:flex; flex-direction:column; gap:12px; padding-bottom:80px; }
+    .news-card { background:#fff; border:1px solid #e5e5e5; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,.06); overflow:hidden; transition:box-shadow .2s; }
+    .news-card:active { box-shadow:0 1px 4px rgba(0,0,0,.08); }
+    .news-card-inner { padding:14px 16px 12px; }
+    .news-card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:8px; gap:8px; }
+    .news-cat-badge { font-size:.62rem; font-weight:700; padding:3px 9px; border-radius:10px; letter-spacing:.4px; text-transform:uppercase; flex-shrink:0; }
+    .nc-Luxury { background:#fef3c7; color:#92400e; }
+    .nc-MarTech { background:#dbeafe; color:#1e40af; }
+    .nc-AI { background:#ede9fe; color:#5b21b6; }
+    .nc-Brand { background:#fce7f3; color:#9d174d; }
+    .nc-Business { background:#d1fae5; color:#065f46; }
+    .nc-Acquisizioni { background:#fff7ed; color:#9a3412; }
+    .nc-Ricerche { background:#e0f2fe; color:#0c4a6e; }
+    .news-paywall-badge { font-size:.58rem; font-weight:800; padding:2px 7px; border-radius:8px; background:#7c3aed; color:#fff; letter-spacing:.3px; flex-shrink:0; }
+    .news-card-title { font-size:.95rem; font-weight:700; line-height:1.35; color:#1a1a1a; margin-bottom:8px; letter-spacing:-.1px; }
+    .news-card-meta { font-size:.72rem; color:#888; margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+    .news-card-meta .dot { color:#ccc; }
+    .news-card-summary { font-size:.83rem; color:#555; line-height:1.6; margin-bottom:10px; }
+    .news-paywall-link { font-size:.8rem; color:#7c3aed; font-weight:600; }
+    .news-card-footer { display:flex; align-items:center; justify-content:space-between; padding-top:8px; border-top:1px solid #f0f0f0; }
+    .news-read-link { font-size:.75rem; color:#7c3aed; font-weight:600; text-decoration:none; }
+    .news-save-btn { width:28px; height:28px; border-radius:50%; border:1px solid #e5e5e5; background:#f8f7f4; display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer; transition:all .2s; }
+    .news-save-btn.saved { background:rgba(250,204,21,.15); border-color:rgba(250,204,21,.4); }
+    /* saved news section inside view-saved */
+    .saved-news-section { margin-top:20px; }
+    .saved-section-title { font-size:.85rem; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:.5px; margin-bottom:10px; }
+    /* light wrapper for news cards inside dark view */
+    .saved-news-section .news-card { background:#141424; border:1px solid var(--border2); box-shadow:none; }
+    .saved-news-section .news-card-title { color:var(--text); }
+    .saved-news-section .news-card-meta { color:var(--text3); }
+    .saved-news-section .news-card-summary { color:var(--text2); }
+    .saved-news-section .news-card-footer { border-top:1px solid var(--border); }
+    .saved-news-section .news-save-btn { background:var(--surface2); border-color:var(--border); }
+    .saved-news-section .news-save-btn.saved { background:rgba(250,204,21,.12); border-color:rgba(250,204,21,.3); }
     .score-bar-wrap { background:var(--surface2); border-radius:20px; height:10px; overflow:hidden; margin-bottom:20px; }
     .score-bar { height:100%; border-radius:20px; background:linear-gradient(90deg,#7c3aed,#e879f9); transition:width .8s; }
     .quiz-restart { padding:13px 32px; border-radius:14px; border:none; background:linear-gradient(135deg,#7c3aed,#a855f7); color:#fff; font-size:.9rem; font-weight:700; cursor:pointer; }
@@ -194,6 +239,10 @@
 <div class="view" id="view-saved">
   <div class="view-title">🔖 Salvate <span class="pill-count-badge" id="savedCount">0</span></div>
   <div class="cards-list" id="savedFeed"></div>
+  <div class="saved-news-section" id="savedNewsSectionWrap" style="display:none">
+    <div class="saved-section-title">News salvate</div>
+    <div id="savedNewsFeed"></div>
+  </div>
 </div>
 
 <div class="view" id="view-hidden">
@@ -207,11 +256,20 @@
   <div class="quiz-wrap" id="quizWrap"></div>
 </div>
 
+<div class="view" id="view-news">
+  <div class="news-header">
+    <div class="news-title">Notizie</div>
+    <div class="news-filters" id="newsFilters"></div>
+  </div>
+  <div class="news-list" id="newsFeed"></div>
+</div>
+
 <div class="bottom-nav">
   <button class="nav-btn active" id="nav-feed" onclick="switchView('feed')"><span class="nav-icon">✦</span>Feed</button>
   <button class="nav-btn" id="nav-quiz" onclick="switchView('quiz')"><span class="nav-icon">🧠</span>Quiz</button>
   <button class="nav-btn" id="nav-saved" onclick="switchView('saved')"><span class="nav-icon">🔖</span>Salvate</button>
   <button class="nav-btn" id="nav-hidden" onclick="switchView('hidden')"><span class="nav-icon">🙈</span>Nascoste</button>
+  <button class="nav-btn" id="nav-news" onclick="switchView('news')"><span class="nav-icon">◉</span>News</button>
 </div>
 
 <script>
@@ -253,6 +311,9 @@ let stato = { saved:[], read:[], hidden:{}, quiz_wrong:{} };
 // statoSha rimosso (Supabase non lo usa)
 let syncTimer = null;
 let dirty = false;
+let news = [];
+let newsSavedIds = JSON.parse(localStorage.getItem('p_news_saved')||'[]');
+let newsActiveFilter = 'Tutte';
 
 function setSyncDot(mode){
   const dot=document.getElementById('syncDot');
@@ -418,9 +479,10 @@ function switchView(v){
   document.querySelectorAll('.nav-btn').forEach(el=>el.classList.remove('active'));
   document.getElementById('view-'+v).classList.add('active');
   document.getElementById('nav-'+v).classList.add('active');
-  if(v==='saved') renderSaved();
+  if(v==='saved') { renderSaved(); renderSavedNews(); }
   if(v==='hidden') renderHidden();
   if(v==='quiz') startQuiz();
+  if(v==='news') renderNews();
 }
 
 // ── BUILD CARD ─────────────────────────────────────────────────────────────
@@ -650,6 +712,7 @@ function renderQuizScore(){
 async function init(){
   setSyncDot('syncing');
   await loadStato();
+  await loadNewsSaved();
   setSyncDot('ok');
   setTimeout(()=>setSyncDot(''),2000);
 
@@ -667,6 +730,132 @@ async function init(){
   renderFeed();
   updateSavedCount();
   updateHiddenCount();
+
+  // ── Load news ──────────────────────────────────────────────────────
+  try {
+    const newsRes = await fetch('news.json?v=' + Date.now());
+    news = await newsRes.json();
+    news.sort((a,b) => b.id - a.id);
+  } catch(e) { news = []; }
+  buildNewsFilters();
+  renderNews();
+  renderSavedNews();
+}
+
+// ── NEWS HELPERS ─────────────────────────────────────────────────────────
+function isNewsSaved(id){ return newsSavedIds.includes(id); }
+
+function toggleNewsSave(id, btn){
+  if(isNewsSaved(id)){
+    newsSavedIds = newsSavedIds.filter(x=>x!==id);
+    btn.textContent='🤍'; btn.classList.remove('saved');
+  } else {
+    newsSavedIds.push(id);
+    btn.textContent='🔖'; btn.classList.add('saved');
+  }
+  localStorage.setItem('p_news_saved', JSON.stringify(newsSavedIds));
+  syncNewsSavedToSupabase();
+  renderSavedNews();
+}
+
+async function syncNewsSavedToSupabase(){
+  try {
+    const encoded = JSON.stringify(newsSavedIds);
+    await fetch(SB_URL + '/rest/v1/pillole_stato', {
+      method: 'POST',
+      headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates' },
+      body: JSON.stringify({ id: 'news_saved', salvata: false, letta: false, nascosta: false, rating: encoded })
+    });
+  } catch(e){}
+}
+
+// Load saved news from Supabase on init if available
+async function loadNewsSaved(){
+  try {
+    const r = await fetch(SB_URL + '/rest/v1/pillole_stato?id=eq.news_saved&select=rating', { headers: SB_HEADERS });
+    if(!r.ok) return;
+    const rows = await r.json();
+    if(rows.length && rows[0].rating){
+      const parsed = JSON.parse(rows[0].rating);
+      if(Array.isArray(parsed)) newsSavedIds = parsed;
+      localStorage.setItem('p_news_saved', JSON.stringify(newsSavedIds));
+    }
+  } catch(e){}
+}
+
+function newsCatClass(cat){
+  const map = { 'Luxury':'nc-Luxury', 'MarTech':'nc-MarTech', 'AI':'nc-AI', 'Brand Strategy':'nc-Brand', 'Business':'nc-Business', 'Acquisizioni':'nc-Acquisizioni', 'Ricerche & Report':'nc-Ricerche' };
+  return map[cat] || 'nc-Business';
+}
+
+function buildNewsFilters(){
+  const cats = ['Tutte', ...new Set(news.map(n=>n.categoria))];
+  const wrap = document.getElementById('newsFilters');
+  wrap.innerHTML = '';
+  cats.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'news-filter-btn' + (c===newsActiveFilter?' active':'');
+    btn.textContent = c;
+    btn.addEventListener('click', () => {
+      newsActiveFilter = c;
+      wrap.querySelectorAll('.news-filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      renderNews();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function createNewsCard(n, darkMode){
+  const card = document.createElement('div');
+  card.className = 'news-card';
+  const catClass = newsCatClass(n.categoria);
+  const saved = isNewsSaved(n.id);
+  const shortDate = formatDate(n.data);
+  const summaryHtml = n.paywall
+    ? `<p class="news-card-summary"><a href="${n.fonte_url}" target="_blank" class="news-paywall-link">Disponibile su ${n.fonte} ↗</a></p>`
+    : `<p class="news-card-summary">${n.riassunto}</p>`;
+  card.innerHTML = `
+    <div class="news-card-inner">
+      <div class="news-card-top">
+        <span class="news-cat-badge ${catClass}">${n.categoria}</span>
+        ${n.paywall ? '<span class="news-paywall-badge">MF</span>' : ''}
+      </div>
+      <div class="news-card-title">${n.titolo}</div>
+      <div class="news-card-meta"><span>${n.fonte}</span><span class="dot">·</span><span>${shortDate}</span></div>
+      ${summaryHtml}
+      <div class="news-card-footer">
+        <a href="${n.fonte_url}" target="_blank" class="news-read-link">Leggi articolo ↗</a>
+        <button class="news-save-btn${saved?' saved':''}" data-newsid="${n.id}">${saved?'🔖':'🤍'}</button>
+      </div>
+    </div>`;
+  card.querySelector('.news-save-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleNewsSave(n.id, e.currentTarget);
+  });
+  return card;
+}
+
+function renderNews(){
+  const filtered = newsActiveFilter === 'Tutte' ? news : news.filter(n=>n.categoria===newsActiveFilter);
+  const feed = document.getElementById('newsFeed');
+  feed.innerHTML = '';
+  if(!filtered.length){ feed.innerHTML='<p style="color:#999;font-size:.85rem;padding:20px 0;">Nessuna news trovata.</p>'; return; }
+  filtered.forEach(n => feed.appendChild(createNewsCard(n, false)));
+}
+
+function renderSavedNews(){
+  const wrap = document.getElementById('savedNewsSectionWrap');
+  const feed = document.getElementById('savedNewsFeed');
+  if(!feed) return;
+  const saved = news.filter(n=>isNewsSaved(n.id));
+  if(!saved.length){ wrap.style.display='none'; feed.innerHTML=''; return; }
+  wrap.style.display='block';
+  feed.innerHTML='';
+  saved.forEach(n => {
+    const card = createNewsCard(n, true);
+    feed.appendChild(card);
+  });
 }
 
 init();
