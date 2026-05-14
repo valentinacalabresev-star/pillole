@@ -74,10 +74,10 @@
     .cat-badge { font-size:.68rem; font-weight:700; padding:3px 9px; border-radius:10px; letter-spacing:.4px; text-transform:uppercase; }
     .type-badge { font-size:.68rem; color:var(--text3); background:var(--surface2); padding:3px 8px; border-radius:8px; }
     .read-badge { font-size:.65rem; color:var(--green); background:rgba(34,197,94,.12); padding:3px 8px; border-radius:8px; }
-    .livello-badge { font-size:.62rem; font-weight:700; padding:2px 7px; border-radius:8px; text-transform:uppercase; letter-spacing:.3px; }
-    .livello-base { background:#14532d; color:#86efac; }
-    .livello-intermedio { background:#713f12; color:#fde047; }
-    .livello-avanzato { background:#7f1d1d; color:#fca5a5; }
+    .livello-dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:2px; vertical-align:middle; flex-shrink:0; }
+    .livello-base { background:#86efac; }
+    .livello-intermedio { background:#fde047; }
+    .livello-avanzato { background:#fca5a5; }
     .rating-wrap { display:flex; align-items:center; gap:8px; margin-top:12px; padding-top:12px; border-top:1px solid var(--border); }
     .rating-label { font-size:.75rem; color:var(--text3); }
     .rating-btn { font-size:.73rem; font-weight:600; padding:4px 12px; border-radius:20px; border:1px solid var(--border2); background:var(--surface2); color:var(--text2); cursor:pointer; transition:all .2s; }
@@ -445,7 +445,7 @@ function buildCard(p,index,opts={}){
     :`<button class="icon-btn" title="Nascondi" onclick="hideCard(${p.id},event)">✕</button>`;
 
   const livelloClass = p.livello ? 'livello-'+p.livello : '';
-  const livelloHtml = p.livello ? `<span class="livello-badge ${livelloClass}">${p.livello}</span>` : '';
+  const livelloHtml = p.livello ? `<span class="livello-dot ${livelloClass}" title="${p.livello}"></span>` : '';
   const ratingVal = stato.rating && stato.rating[p.id];
   const ratingBadgeHtml = ratingVal
     ? `<span class="rating-badge rating-badge-${ratingVal}">${ratingVal==='sapevo'?'lo sapevo già':'novità'}</span>`
