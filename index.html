@@ -152,7 +152,8 @@
 
     /* ── NEWS VIEW ─────────────────────────────────────────────────── */
     #view-news { background:#f8f7f4; padding:16px; }
-    .news-header { margin-bottom:16px; }
+    .news-header { position:sticky; top:0; z-index:100; background:rgba(248,247,244,.95); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid #e8e5e0; padding:16px 18px 12px; margin-bottom:0; }
+    .news-header-title { font-size:1.4rem; font-weight:800; color:#0f0f1a; letter-spacing:-.3px; margin-bottom:10px; }
     .news-title { font-size:1.4rem; font-weight:800; color:#1a1a1a; letter-spacing:-.3px; margin-bottom:12px; }
     .news-filters { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px; flex-wrap:nowrap; }
     .news-filters::-webkit-scrollbar { display:none; }
@@ -258,10 +259,10 @@
 
 <div class="view" id="view-news">
   <div class="news-header">
-    <div class="news-title">Notizie</div>
+    <div class="news-header-title">News</div>
     <div class="news-filters" id="newsFilters"></div>
   </div>
-  <div class="news-list" id="newsFeed"></div>
+  <div class="news-list" id="newsFeed" style="padding:16px 0;"></div>
 </div>
 
 <div class="bottom-nav">
@@ -479,6 +480,9 @@ function switchView(v){
   document.querySelectorAll('.nav-btn').forEach(el=>el.classList.remove('active'));
   document.getElementById('view-'+v).classList.add('active');
   document.getElementById('nav-'+v).classList.add('active');
+  // Nascondi header principale in news, mostralo negli altri
+  const mainHeader = document.querySelector('.header');
+  if(mainHeader) mainHeader.style.display = (v==='news') ? 'none' : '';
   if(v==='saved') { renderSaved(); renderSavedNews(); }
   if(v==='hidden') renderHidden();
   if(v==='quiz') startQuiz();
