@@ -1,31 +1,5 @@
 [
   {
-    "id": 1,
-    "data": "2026-05-13",
-    "categoria": "Marketing",
-    "tipo": "testo",
-    "titolo": "Il paradosso della scelta: perché troppe opzioni paralizzano il cliente",
-    "contenuto": "Nel 1995 lo psicologo Barry Schwartz condusse un esperimento semplice ma rivoluzionario: in un supermercato mise due bancarelle di marmellate. Una con 6 gusti, l'altra con 24. La bancarella con 24 attirava più persone, ma quella con 6 vendeva 10 volte di più.\n\nQuesta è la legge del paradosso della scelta: più opzioni offri, più il cervello del cliente si blocca in un loop decisionale. Il motivo è neurologico — la corteccia prefrontale, responsabile delle decisioni, si sovraccarica e la risposta istintiva è non scegliere nulla.\n\nIn marketing si traduce così: ogni volta che allarghi troppo il menu, la landing page, il catalogo prodotti o le CTA, stai inconsapevolmente riducendo le conversioni. I brand che convertono di più spesso fanno una cosa sola: riducono le opzioni, guidano la scelta, danno un consiglio esplicito.\n\nLa prossima volta che devi strutturare un'offerta o una pagina, chiediti: sto semplificando o sto esponendo tutto quello che ho? La risposta cambia il risultato.",
-    "fonte": {
-      "nome": "The Paradox of Choice — Barry Schwartz (TED, 2005)",
-      "url": "https://www.ted.com/talks/barry_schwartz_the_paradox_of_choice"
-    },
-    "livello": "intermedio"
-  },
-  {
-    "id": 2,
-    "data": "2026-05-13",
-    "categoria": "Psicologia",
-    "tipo": "testo",
-    "titolo": "L'effetto Dunning-Kruger: perché i principianti si sentono esperti",
-    "contenuto": "David Dunning e Justin Kruger nel 1999 pubblicarono uno studio che spiegava un fenomeno che tutti abbiamo vissuto: le persone con poca competenza in un campo tendono a sovrastimare le proprie capacità, mentre gli esperti veri spesso si sottovalutano.\n\nIl meccanismo è questo: per riconoscere i propri errori serve la stessa competenza necessaria per non commetterli. Chi sa poco, non sa nemmeno cosa non sa — e questo crea una falsa sicurezza.\n\nNella curva del Dunning-Kruger ci sono quattro fasi: il picco della stupidità (poca esperienza, alta fiducia), la valle della disperazione (cominci a capire quanto non sai), il pendio dell'illuminazione (crescita reale con consapevolezza), e il plateau della padronanza (alta competenza, stima di sé calibrata).\n\nPerché conta nella vita professionale? Perché riconoscere in quale fase sei — tu e le persone con cui lavori — ti dà un vantaggio enorme. Chi è nel picco ha bisogno di essere sfidato, non lusingato. Chi è nella valle ha bisogno di supporto, non di critica.",
-    "fonte": {
-      "nome": "Unskilled and Unaware of It — Kruger & Dunning, Journal of Personality and Social Psychology (1999)",
-      "url": "https://psycnet.apa.org/record/1999-15054-002"
-    },
-    "livello": "base"
-  },
-  {
     "id": 3,
     "data": "2026-05-13",
     "categoria": "Business",
@@ -37,32 +11,6 @@
       "url": "https://www.morningstar.com/company/economic-moat"
     },
     "livello": "intermedio"
-  },
-  {
-    "id": 4,
-    "data": "2026-05-13",
-    "categoria": "AI",
-    "tipo": "testo",
-    "titolo": "Cos'è un agente AI e perché sta cambiando tutto",
-    "contenuto": "Fino a poco tempo fa, i modelli di AI come ChatGPT erano strumenti reattivi: rispondevano a domande, generavano testi, ma non facevano nulla da soli. Un agente AI è diverso: è un sistema che riceve un obiettivo, pianifica i passi necessari, usa strumenti (ricerca web, email, codice, API) e porta il lavoro a termine in autonomia.\n\nL'analogia migliore è la differenza tra un consulente che ti dà consigli e un collaboratore che esegue. Gli agenti AI eseguono: prenotano riunioni, mandano email, aggiornano database, cercano informazioni e prendono micro-decisioni lungo il percorso.\n\nNel marketing concreto: un agente può monitorare i competitor ogni giorno, scrivere report, postare contenuti, rispondere ai clienti e analizzare le performance — tutto in parallelo e in autonomia.\n\nLa sfida non è tecnologica ma strategica: chi saprà progettare workflow agentici efficaci avrà un moltiplicatore di produttività senza precedenti. Chi non li capisce delegherà a chi li usa. Questo è il vero cambio di paradigma del 2025-2026.",
-    "fonte": {
-      "nome": "Agents — Anthropic Research (2024)",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
-    },
-    "livello": "intermedio"
-  },
-  {
-    "id": 5,
-    "data": "2026-05-13",
-    "categoria": "Scienze Comportamentali",
-    "tipo": "testo",
-    "titolo": "Il bias di conferma: il filtro invisibile che distorce la realtà",
-    "contenuto": "Il bias di conferma è la tendenza del cervello a cercare, interpretare e ricordare le informazioni in modo che confermino ciò che già crede. Non è pigrizia mentale — è un meccanismo evolutivo: elaborare ogni informazione da zero sarebbe troppo costoso energeticamente.\n\nIl problema è che questo filtro invisibile distorce sistematicamente le decisioni. Un manager convinto che una campagna funzioni ignorerà i dati negativi e amplificherà quelli positivi. Un consumatore che ha scelto un brand tenderà a trovare conferme di aver fatto bene — anche se i segnali dicono il contrario.\n\nCome difendersi? Tre tattiche concrete: cercare attivamente dati che contraddicono la tua ipotesi (falsificazione), chiedere opinioni a persone con prospettive diverse (devil's advocate), e separare il momento di raccolta dati dal momento di interpretazione.\n\nIn strategia, il bias di conferma è responsabile di molti flop: prodotti lanciati su ricerche di mercato mal interpretate, campagne continuate troppo a lungo, mercati sottovalutati.",
-    "fonte": {
-      "nome": "Thinking, Fast and Slow — Daniel Kahneman (2011)",
-      "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/"
-    },
-    "livello": "base"
   },
   {
     "id": 6,
@@ -78,19 +26,6 @@
     "livello": "base"
   },
   {
-    "id": 7,
-    "data": "2026-05-13",
-    "categoria": "Finanza",
-    "tipo": "testo",
-    "titolo": "L'interesse composto: il concetto che Einstein chiamava l'ottava meraviglia",
-    "contenuto": "L'interesse composto è il meccanismo per cui i guadagni di un investimento generano a loro volta altri guadagni. In pratica: non guadagni solo sul capitale iniziale, ma anche sugli interessi accumulati. E questo, nel tempo, crea una crescita esponenziale.\n\nEsempio concreto: investi 1.000€ con un rendimento annuo del 7%. Dopo 10 anni hai 1.967€. Dopo 20 anni hai 3.870€. Dopo 30 anni hai 7.612€. Non hai fatto nulla — solo lasciato lavorare il tempo.\n\nLa formula è semplice: C × (1 + r)^n, dove C è il capitale, r il tasso annuo, n gli anni. Ma la cosa davvero importante non è la formula — è iniziare presto. Ogni anno che aspetti vale molto più di quanto sembri.\n\nL'altro lato della medaglia: l'interesse composto funziona anche al contrario, con i debiti. Un mutuo, un prestito al consumo, un debito sulla carta di credito — crescono con la stessa logica. Capire questo meccanismo ti rende più libero.",
-    "fonte": {
-      "nome": "The Snowball: Warren Buffett and the Business of Life — Alice Schroeder (2008)",
-      "url": "https://www.investopedia.com/terms/c/compoundinterest.asp"
-    },
-    "livello": "intermedio"
-  },
-  {
     "id": 8,
     "data": "2026-05-13",
     "categoria": "Digital",
@@ -100,19 +35,6 @@
     "fonte": {
       "nome": "Google's Privacy Sandbox — developers.google.com",
       "url": "https://developers.google.com/privacy-sandbox"
-    },
-    "livello": "avanzato"
-  },
-  {
-    "id": 9,
-    "data": "2026-05-13",
-    "categoria": "Geopolitica",
-    "tipo": "testo",
-    "titolo": "La guerra dei chip: perché Taiwan è al centro del mondo",
-    "contenuto": "TSMC, azienda taiwanese fondata nel 1987, produce oltre il 90% dei chip più avanzati del pianeta — quelli che fanno girare iPhone, server AI, sistemi militari e automobili moderne. Questo ha trasformato Taiwan nell'isola geopoliticamente più importante del mondo.\n\nCina e USA si contendono il controllo di questa filiera da anni. Gli Stati Uniti hanno varato il CHIPS Act (2022): 52 miliardi di dollari per riportare la produzione di semiconduttori in America. L'Europa ha seguito con il suo European Chips Act. La Cina investe centinaia di miliardi per costruire una filiera indipendente, ma è ancora indietro di 5-7 anni sul processo produttivo.\n\nPerché è importante per tutti? Perché chi controlla i chip controlla l'economia digitale. Le sanzioni americane che hanno bloccato l'export di chip avanzati verso la Cina nel 2022-2023 hanno frenato lo sviluppo AI cinese più di qualsiasi altra misura. Huawei ha risposto con il Mate 60 Pro — un chip 7nm prodotto da SMIC — dimostrando che la Cina avanza, ma lentamente.\n\nLo scenario che tutti temono: un'invasione cinese di Taiwan bloccherebbe la produzione globale di chip avanzati. Non è fantascienza — è il rischio geopolitico numero uno degli anni 2020.",
-    "fonte": {
-      "nome": "Chip War — Chris Miller (2022) / Reuters Semiconductors Tracker",
-      "url": "https://www.reuters.com/technology/semiconductors/"
     },
     "livello": "avanzato"
   },
@@ -130,19 +52,6 @@
     "livello": "base"
   },
   {
-    "id": 11,
-    "data": "2026-05-13",
-    "categoria": "Performance",
-    "tipo": "testo",
-    "titolo": "La regola delle 2 ore: quando il tuo cervello lavora davvero",
-    "contenuto": "La ricerca sulla produttività cognitiva mostra un pattern costante: il cervello umano ha una finestra di lavoro profondo di circa 90-120 minuti prima di aver bisogno di recupero. Non è una questione di volontà — è fisiologia. Il sistema nervoso alterna naturalmente cicli di alta attivazione e recupero, i cosiddetti cicli ultradian.\n\nCosa significa in pratica? Che lavorare 8 ore filate è un'illusione — in realtà lavori 2 ore ad alta qualità e 6 ore in modalità zombie, rispondendo email e aspettando che la giornata finisca.\n\nLa strategia dei top performer (documentata da Cal Newport in Deep Work e da Anders Ericsson nelle sue ricerche sui violinisti d'élite) è diversa: blocchi da 90 minuti di lavoro vero, poi pausa vera (non scorrere Instagram — proprio staccare), poi un altro blocco.\n\nIl paradosso: lavorare meno ore ma con più intenzione produce più risultati. I migliori violinisti studiati da Ericsson praticavano meno ore dei medi — ma in modo più deliberato e con pause strutturate.",
-    "fonte": {
-      "nome": "Deep Work — Cal Newport (2016) / Peak — Anders Ericsson (2016)",
-      "url": "https://calnewport.com/books/deep-work/"
-    },
-    "livello": "base"
-  },
-  {
     "id": 12,
     "data": "2026-05-13",
     "categoria": "Filosofia",
@@ -152,19 +61,6 @@
     "fonte": {
       "nome": "Enchiridion — Epitteto (ca. 135 d.C.) / Meditations — Marco Aurelio",
       "url": "https://dailystoic.com/enchiridion/"
-    },
-    "livello": "intermedio"
-  },
-  {
-    "id": 13,
-    "data": "2026-05-13",
-    "categoria": "Arte & Design",
-    "tipo": "testo",
-    "titolo": "Perché il design minimalista vende di più",
-    "contenuto": "Apple, Muji, Aesop, Loro Piana. Cosa hanno in comune? Un design che toglie invece di aggiungere. E performance di brand tra le più solide al mondo. Non è una coincidenza.\n\nIl minimalismo nel design non è solo estetica — è strategia cognitiva. Un'interfaccia, un packaging, un negozio con pochi elementi riduce il carico cognitivo: il cervello spende meno energia per elaborare l'ambiente e ne ha di più per apprezzare il prodotto. Questo genera una sensazione di comfort e qualità percepita.\n\nIl designer Dieter Rams (che ha ispirato Jony Ive di Apple) aveva 10 principi. Il più famoso: un buon design è il meno design possibile. Non significa vuoto — significa che ogni elemento presente deve guadagnarsi il suo posto.\n\nPer chi lavora in comunicazione: la regola vale anche per testi, slide, campagne. Ogni parola in più che aggiungi riduce il peso di quelle che rimangono. Ogni elemento visivo in più è un concorrente per l'attenzione. Eliminare è la competenza più rara e più potente nel design.",
-    "fonte": {
-      "nome": "10 Principles of Good Design — Dieter Rams / Vitsœ",
-      "url": "https://www.vitsoe.com/gb/about/good-design"
     },
     "livello": "intermedio"
   },
@@ -184,18 +80,178 @@
     "livello": "avanzato"
   },
   {
-    "id": 15,
-    "data": "2026-05-13",
+    "id": 16,
+    "data": "2026-05-14",
     "categoria": "Marketing",
-    "tipo": "video",
-    "titolo": "Il segreto dei brand che durano: Simon Sinek e il Golden Circle",
-    "contenuto": "Simon Sinek spiega perché Apple, Martin Luther King e i Wright Brothers hanno avuto successo dove altri con le stesse risorse hanno fallito. La risposta è il Golden Circle: Start With Why.\n\nUno dei TED talk più visti di sempre. 18 minuti che cambiano come pensi al posizionamento di un brand — e alla tua comunicazione personale.",
-    "video_id": "qp0HIF3SfI4",
-    "video_thumb": "https://img.youtube.com/vi/qp0HIF3SfI4/hqdefault.jpg",
+    "tipo": "testo",
+    "titolo": "Jobs-to-be-Done: perché le persone non comprano prodotti, ma progressi",
+    "contenuto": "Il framework Jobs-to-be-Done (JTBD), teorizzato da Clayton Christensen e poi sviluppato da Bob Moesta, ribalta la logica del marketing tradizionale: le persone non acquistano un prodotto per le sue caratteristiche, ma per 'ingaggiarlo' a svolgere un lavoro — un progresso funzionale, emotivo o sociale che vogliono fare nella propria vita.\n\nL'esempio classico è il milkshake di McDonald's. La ricerca convenzionale chiedeva ai clienti cosa preferivano del milkshake (sapore, consistenza, prezzo). Il team JTBD scoprì che la maggior parte veniva comprato di mattina, da soli in macchina, per 'fare compagnia' durante un lungo tragitto noioso e tenere la fame fino a pranzo. Il competitor non era un altro milkshake — era una banana o un bagel.\n\nQuesto cambia tutto nel modo in cui si segmentano i mercati e si costruisce la comunicazione. Invece di chiedere 'chi è il tuo cliente?', si chiede 'che lavoro sta cercando di fare quando ingaggia il tuo prodotto?'. Due persone demograficamente identiche possono ingaggiare lo stesso prodotto per lavori completamente diversi.\n\nIn pratica: le interviste JTBD si concentrano su momenti specifici di acquisto — cosa stava succedendo nella vita del cliente? Cosa lo ha spinto a cercare una soluzione quel giorno? Cosa stava 'licenziando' per assumere il tuo prodotto? Questo metodo rivela insight che le survey tradizionali non toccano mai.\n\nPer chi lavora su posizionamento e messaggi, JTBD è forse il framework più potente disponibile oggi — più utile della buyer persona classica perché mappa il contesto decisionale reale.",
     "fonte": {
-      "nome": "Simon Sinek — TED2009",
-      "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+      "nome": "Competing Against Luck — Clayton Christensen, Harvard Business Review",
+      "url": "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 17,
+    "data": "2026-05-14",
+    "categoria": "AI",
+    "tipo": "testo",
+    "titolo": "RAG: come i sistemi AI smettono di 'inventare' e iniziano a ragionare su dati reali",
+    "contenuto": "Uno dei problemi principali dei Large Language Model è la tendenza a produrre 'hallucinations' — risposte plausibili ma false. La soluzione più adottata in ambito enterprise è il Retrieval-Augmented Generation (RAG): un'architettura che combina un sistema di ricerca su documenti reali con la capacità generativa del modello.\n\nIl funzionamento è questo: quando l'utente fa una domanda, il sistema prima interroga una base di conoscenza (documenti, PDF, database) e recupera i frammenti più rilevanti. Questi frammenti vengono poi passati al LLM come contesto, e il modello risponde basandosi su quelle fonti — non solo sulla sua memoria parametrica.\n\nIn pratica questo significa che un'azienda può costruire un assistente AI che risponde su documentazione interna, policy, prodotti, FAQ — senza addestrare un nuovo modello (operazione costosissima) e senza esporre i dati al provider. Il modello 'legge' i documenti al momento della query.\n\nI sistemi RAG avanzati aggiungono strategie di reranking (ordinare i frammenti per rilevanza), chunking intelligente (dividere i documenti in modi che preservano il contesto), e metadata filtering (filtrare per data, categoria, autore). La qualità del sistema dipende molto da queste scelte architetturali, non solo dal modello scelto.\n\nPer un CMO o uno strategist, capire RAG è fondamentale: è la base tecnica di chatbot aziendali, assistenti per il customer care, tool di analisi competitiva automatizzata, e motori di raccomandazione editoriale basati su AI.",
+    "fonte": {
+      "nome": "Retrieval-Augmented Generation — Meta AI Research / arXiv",
+      "url": "https://arxiv.org/abs/2005.11401"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 18,
+    "data": "2026-05-14",
+    "categoria": "Neuromarketing",
+    "tipo": "testo",
+    "titolo": "L'effetto di dotazione: perché possedere qualcosa lo rende più prezioso",
+    "contenuto": "Nel 1990 l'economista Richard Thaler — poi Nobel per l'Economia — formalizzò l'endowment effect (effetto di dotazione): le persone valutano un oggetto significativamente di più una volta che lo possiedono rispetto a prima di averlo. In esperimenti classici, chi riceveva una tazza come regalo non era disposto a venderla per meno del doppio del prezzo che avrebbe pagato per acquistarla.\n\nIl meccanismo è legato all'avversione alla perdita, teorizzata da Kahneman e Tversky: perdere qualcosa è psicologicamente circa due volte più doloroso che guadagnare qualcosa di equivalente. Possedere un oggetto crea una forma di 'attaccamento' che distorce la valutazione razionale.\n\nIn marketing, questo principio si applica in modi molto concreti. I free trial sono il caso più ovvio: dopo 30 giorni con il software, smettere non è 'rinunciare a comprarlo' — è perdere qualcosa che già fai tuo. I programmi di prova a casa di IKEA o i test drive automobilistici sfruttano lo stesso meccanismo.\n\nUn'applicazione più sofisticata riguarda la personalizzazione: quando un utente configura un prodotto (scegliendo colori, moduli, opzioni), si instaura un senso di proprietà psicologica che aumenta la willingness to pay. Questo è noto anche come 'IKEA effect' — il valore percepito cresce con lo sforzo investito.\n\nPer chi lavora su funnel e conversion rate optimization, l'endowment effect suggerisce di progettare touchpoint che creino 'possesso virtuale' prima dell'acquisto: anteprime personalizzate, configuratori, contenuti che parlano già di 'il tuo X' anziché 'un X'.",
+    "fonte": {
+      "nome": "Experimental Tests of the Endowment Effect — Kahneman, Knetsch, Thaler (Journal of Political Economy)",
+      "url": "https://www.jstor.org/stable/2937761"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 19,
+    "data": "2026-05-14",
+    "categoria": "Geopolitica",
+    "tipo": "testo",
+    "titolo": "La frammentazione di internet: dal World Wide Web al Splinternet",
+    "contenuto": "Internet è nata come rete globale unificata, ma dagli anni 2010 è in corso un processo di frammentazione geopolitica spesso chiamato 'Splinternet'. Non si tratta di una rottura unica ma di una serie di decisioni normative, tecnologiche e politiche che stanno creando versioni divergenti di internet — e di conseguenza di economia digitale — lungo linee nazionali e blocchi geopolitici.\n\nI casi più visibili sono estremi: la 'Great Firewall' cinese, che filtra l'accesso a piattaforme occidentali e ha costruito un ecosistema alternativo (Baidu, WeChat, Weibo, Alibaba), e il 'RuNet' russo, un tentativo di isolare la rete interna in caso di disconnessione internazionale. Ma anche l'UE con il GDPR, il Digital Services Act e le recenti normative sull'AI sta costruendo un framework regolatorio che di fatto crea una 'internet europea' con regole proprie.\n\nLe implicazioni per il business digitale globale sono profonde: un'azienda che vuole operare in mercati multipli deve gestire data sovereignty (dove risiedono i dati), compliance normativa per giurisdizione, restrizioni su trasferimento di dati cross-border, e talvolta versioni diverse dello stesso prodotto.\n\nC'è anche una dimensione di sicurezza: la guerra in Ucraina ha accelerato la discussione sulla cyber sovereignty — la capacità di uno stato di mantenere infrastrutture digitali critiche indipendenti da fornitori stranieri (es. chip, cloud providers, sistemi operativi).\n\nPer chi lavora in digital strategy, capire il Splinternet non è teoria: impatta la scelta delle piattaforme, la localizzazione dei dati, le strategie di espansione internazionale e la gestione del rischio normativo.",
+    "fonte": {
+      "nome": "Council on Foreign Relations — Splinternet",
+      "url": "https://www.cfr.org/backgrounder/internet-fragmentation"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 20,
+    "data": "2026-05-14",
+    "categoria": "Geopolitica",
+    "tipo": "testo",
+    "titolo": "La guerra dei chip: perché i semiconduttori sono il petrolio del XXI secolo",
+    "contenuto": "Quando nel 2022 gli Stati Uniti hanno introdotto restrizioni sull'export di semiconduttori avanzati verso la Cina, non si è trattato di una misura commerciale ordinaria — è stato un atto di guerra tecnologica. I chip avanzati (sotto i 7nm) sono oggi l'infrastruttura fondamentale di tutto: AI, difesa, telecomunicazioni 5G, automobili elettriche, sistemi missilistici.\n\nLa catena del valore dei semiconduttori è straordinariamente concentrata e fragile. TSMC (Taiwan) produce oltre il 90% dei chip più avanzati del mondo. ASML (Paesi Bassi) è l'unica azienda al mondo in grado di produrre le macchine per litografia EUV necessarie per fabricare chip sotto i 7nm. ARM (UK, poi acquisita da SoftBank) progetta l'architettura usata in quasi tutti i chip mobile. Questa dipendenza rende Taiwan un nodo geopolitico critico — una crisi nello stretto sarebbe catastrofica per l'economia digitale globale.\n\nGli USA rispondono con il CHIPS and Science Act (2022): 52 miliardi di dollari per riportare produzione di chip sul suolo americano. L'UE ha varato un EU Chips Act simile. La Cina sta investendo centinaia di miliardi per sviluppare un'industria domestica — con risultati parziali, visto che il litografo EUV rimane inaccessibile per via delle sanzioni.\n\nLe implicazioni strategiche sono multiple: reshoring della produzione tecnologica, nuove alleanze industriali (AUKUS, Chip 4 tra USA-Giappone-Corea-Taiwan), e un riassetto del commercio globale lungo linee geopolitiche piuttosto che economiche.\n\nPer un professionista del business digitale, questo significa che la supply chain tecnologica è ormai una variabile geopolitica — non solo logistica.",
+    "fonte": {
+      "nome": "Chip War — Chris Miller (Simon & Schuster, 2022)",
+      "url": "https://www.simonandschuster.com/books/Chip-War/Chris-Miller/9781982172008"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 21,
+    "data": "2026-05-14",
+    "categoria": "Scienze Comportamentali",
+    "tipo": "testo",
+    "titolo": "Default e nudge: come l'architettura delle scelte governa il comportamento di massa",
+    "contenuto": "Richard Thaler e Cass Sunstein nel libro 'Nudge' (2008) hanno teorizzato che il modo in cui le opzioni sono presentate — la 'choice architecture' — influenza profondamente le decisioni, spesso più degli incentivi economici. Il nudge (piccola spinta) è un intervento che non limita le scelte né cambia i prezzi, ma ridisegna il contesto per orientare i comportamenti verso esiti migliori.\n\nL'esempio più citato è quello delle pensioni integrative: nei paesi dove l'iscrizione è opt-out (sei già iscritto, puoi uscire), la partecipazione supera il 90%. Nei paesi dove è opt-in (devi iscriverti attivamente), si ferma spesso al 40-50%. Stessa opportunità, stesso prodotto — risultati opposti per effetto del default.\n\nIn ambito marketing e prodotto, i default sono ovunque: il piano tariffario preselezionato, le notifiche attivate di default, il cookie banner che nasconde il 'rifiuta tutto'. Non è casualità — è design comportamentale intenzionale. La differenza tra un'azienda etica e una manipolativa spesso sta in quale default scelgono e perché.\n\nI governi usano i nudge per politiche pubbliche: salute (mettere la frutta all'ingresso della mensa, non i dolci), risparmio energetico (mostrare il consumo del vicino sul bollettino), donazione organi. Il risultato empirico è che interventi a costo quasi zero possono avere effetti comparabili a campagne milionarie.\n\nPer chi lavora su UX, product design o CRO, la teoria del nudge è un framework operativo diretto: ogni schermata, ogni flusso, ogni default è una scelta di architettura che ha conseguenze comportamentali misurabili.",
+    "fonte": {
+      "nome": "Nudge — Thaler & Sunstein (Penguin Books)",
+      "url": "https://www.penguinrandomhouse.com/books/304901/nudge-by-richard-h-thaler-and-cass-r-sunstein/"
     },
     "livello": "intermedio"
+  },
+  {
+    "id": 22,
+    "data": "2026-05-14",
+    "categoria": "Business",
+    "tipo": "testo",
+    "titolo": "Teoria dei giochi applicata al business: cooperare o tradire?",
+    "contenuto": "La teoria dei giochi, sviluppata da von Neumann e Nash negli anni '40-'50, studia come agenti razionali prendono decisioni interdipendenti — quando il risultato di una scelta dipende anche dalle scelte altrui. Il caso più famoso è il 'Dilemma del Prigioniero': due sospetti vengono interrogati separatamente. Se entrambi tacciono, pena minima. Se uno tradisce e l'altro tace, chi tradisce è libero e l'altro prende la pena massima. Se entrambi tradiscono, pena media per tutti.\n\nLa logica razionale individuale porta sempre a tradire — eppure il risultato collettivo è peggiore. Questo spiega molti comportamenti di mercato: guerre di prezzo (tutti abbassano i margini, nessuno guadagna), corsa agli armamenti pubblicitari (tutti spendono di più, le quote di mercato restano uguali), race to the bottom su qualità.\n\nL'equilibrio di Nash — il punto in cui nessun giocatore ha convenienza a cambiare unilateralmente strategia — non è quasi mai il risultato ottimale collettivo. La cooperazione richiede meccanismi di fiducia, reputazione, e soprattutto ripetizione nel tempo (nei 'giochi ripetuti', la cooperazione emerge naturalmente).\n\nIn pratica aziendale, questo spiega perché le joint venture, i consorzi di settore e le alleanze strategiche funzionano meglio quando c'è un orizzonte temporale lungo e meccanismi di accountability reciproca. Amazon e Apple, pur competendo su molti fronti, cooperano su altri perché il gioco è ripetuto e la reputazione ha valore.\n\nPer chi negozia accordi, partnership o gestisce competitive dynamics, la teoria dei giochi offre un vocabolario preciso per analizzare quando conviene competere, quando cooperare, e quando uscire dal gioco.",
+    "fonte": {
+      "nome": "The Art of Strategy — Dixit & Nalebuff (W. W. Norton & Company)",
+      "url": "https://wwnorton.com/books/9780393337174"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 23,
+    "data": "2026-05-14",
+    "categoria": "Comunicazione",
+    "tipo": "video",
+    "titolo": "La struttura narrativa che ha reso miliardari i pitch di startup",
+    "contenuto": "Andy Raskin, consulente di comunicazione strategica, ha analizzato i pitch di Salesforce, Zuora e altre aziende tech di successo per identificare una struttura narrativa comune. Non si tratta di storytelling generico: è una sequenza precisa che sposta il frame dal prodotto al 'cambiamento nel mondo'.\n\nLa struttura è: (1) nomina il cambiamento epocale che non può essere ignorato; (2) mostra che ci sono vinti e vincitori in questo cambiamento; (3) dipingi la terra promessa (non il prodotto, il futuro desiderabile); (4) introduci gli ostacoli che rendono difficile arrivarci; (5) presenta il tuo prodotto come la 'soluzione magica'.\n\nIn questo video Andy spiega il metodo con esempi reali. Applicabile non solo ai pitch ma a qualsiasi comunicazione strategica, sia B2B che B2C.",
+    "video_id": "IN62XTJChaA",
+    "video_thumb": "https://img.youtube.com/vi/IN62XTJChaA/hqdefault.jpg",
+    "fonte": {
+      "nome": "Andy Raskin — Strategic Narrative",
+      "url": "https://www.youtube.com/watch?v=IN62XTJChaA"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 24,
+    "data": "2026-05-14",
+    "categoria": "Cultura Generale",
+    "tipo": "testo",
+    "titolo": "Il Rinascimento come primo caso di personal branding nella storia",
+    "contenuto": "Il Rinascimento italiano (XV-XVI secolo) è stato il primo momento storico in cui il talento individuale è diventato un brand. Prima, le opere d'arte erano quasi sempre anonime — create da artigiani al servizio della chiesa o dei nobili. Con il Rinascimento, artisti come Leonardo, Michelangelo, Raffaello e Tiziano diventano marchi in sé: il loro nome aumenta il valore dell'opera, attirano committenti, gestiscono botteghe come agenzie creative avant la lettre.\n\nGiorgio Vasari, con 'Le Vite de' più eccellenti pittori, scultori e architettori' (1550), ha scritto di fatto il primo libro di case study biografici della storia, consacrando la narrativa dell'artista-genio come entità distinta dall'artigiano. Quella narrativa non è mai tramontata — è alla base del personal branding moderno.\n\nIl meccanismo era sofisticato: Leonardo curava meticolosamente la sua immagine pubblica (presentandosi alle corti come 'homo universale'), Michelangelo gestiva la sua scarsità percepita rifiutando committenti, Raffaello costruiva uno studio capace di produrre opere 'alla Raffaello' anche senza la sua mano diretta — un modello di scalabilità del brand personale.\n\nC'è anche una lezione sulla diversificazione: Lorenzo il Magnifico non era solo un mecenate — era un imprenditore che capì che investire in simboli culturali (arte, architettura, poesia) costruiva soft power politico e reputazione internazionale per Firenze. La cultura come strumento di influenza geopolitica non è un'invenzione contemporanea.\n\nGuardare il Rinascimento con occhi strategici rivela quanto i meccanismi fondamentali della reputazione, dell'influenza e del valore simbolico siano rimasti invariati nel corso dei secoli.",
+    "fonte": {
+      "nome": "The Civilization of the Renaissance in Italy — Jacob Burckhardt (1860)",
+      "url": "https://www.gutenberg.org/ebooks/2074"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 25,
+    "data": "2026-05-14",
+    "categoria": "Cultura Generale",
+    "tipo": "testo",
+    "titolo": "Effetto Lindy: perché alcune idee invecchiano al contrario",
+    "contenuto": "L'effetto Lindy è un'idea attribuita al matematico Benoit Mandelbrot e poi popolarizzata da Nassim Taleb nel libro 'Antifragile': per le idee, le tecnologie e le istituzioni non fisiche, la longevità futura attesa è proporzionale all'anzianità attuale. In altre parole, un libro che è in stampa da 50 anni ha più probabilità di essere ancora letto tra 50 anni rispetto a uno pubblicato 6 mesi fa.\n\nQuesto ribalta l'ossessione contemporanea per la novità. Non tutto ciò che è nuovo è migliore — anzi, la maggior parte delle novità scompare rapidamente, mentre ciò che sopravvive lo fa perché ha resistito al test del tempo e dell'utilità reale. Euclide, Montaigne, Machiavelli vengono ancora letti perché trattano problemi umani permanenti.\n\nL'effetto Lindy ha implicazioni pratiche nella scelta delle fonti di apprendimento: un libro di management del 2023 ha un'aspettativa di vita probabilmente breve; un testo come 'The Effective Executive' di Drucker (1967) o 'Influence' di Cialdini (1984) ha già dimostrato di contenere principi duraturi.\n\nHa anche implicazioni sulla resistenza al cambiamento tecnologico: le tecnologie 'Lindy-robuste' (email, PDF, fogli di calcolo) sopravvivono ai tool trendy perché risolvono problemi fondamentali in modo semplice. Non è conservatorismo — è signal filtering.\n\nPer chi lavora in strategia e deve distinguere trend duraturi da mode passeggere, l'effetto Lindy è un filtro cognitivo utile: chiedi sempre quanto tempo esiste già questa idea e quante volte è stata già 'scoperta' o 're-inventata'.",
+    "fonte": {
+      "nome": "Antifragile — Nassim Nicholas Taleb (Random House, 2012)",
+      "url": "https://www.penguinrandomhouse.com/books/176227/antifragile-by-nassim-nicholas-taleb/"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 26,
+    "data": "2026-05-14",
+    "categoria": "Cultura Generale",
+    "tipo": "video",
+    "titolo": "Come funziona davvero il cervello quando prende una decisione",
+    "contenuto": "David Eagleman, neuroscienziato di Stanford, spiega in questo talk come la maggior parte delle decisioni umane avviene al di sotto della soglia della coscienza — il cervello cosciente arriva spesso dopo il processo decisionale, non prima, e costruisce una narrativa di razionalità post-hoc.\n\nQuesto ha implicazioni enormi per chiunque lavori con comportamenti umani: marketing, comunicazione, leadership, negoziazione. Comprendere che il 'decider' non è la mente razionale ma un sistema di processi paralleli e inconsci cambia come si progettano messaggi, prodotti e esperienze.\n\nEagleman è uno dei comunicatori scientifici più efficaci in circolazione — il video è denso ma accessibile.",
+    "video_id": "SB4-QBFHxFQ",
+    "video_thumb": "https://img.youtube.com/vi/SB4-QBFHxFQ/hqdefault.jpg",
+    "fonte": {
+      "nome": "David Eagleman — Big Think",
+      "url": "https://www.youtube.com/watch?v=SB4-QBFHxFQ"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 27,
+    "data": "2026-05-14",
+    "categoria": "Digital",
+    "tipo": "testo",
+    "titolo": "Zero-party data: la nuova frontiera del marketing dopo la morte dei cookie",
+    "contenuto": "Con il tramonto dei cookie di terze parti (accelerato da iOS 14+ di Apple e dalle restrizioni di Chrome), il settore del marketing ha dovuto ripensare le strategie di raccolta dati. Si parla molto di first-party data (dati raccolti direttamente dal brand), ma la frontiera più interessante è il zero-party data: informazioni che il consumatore sceglie deliberatamente di condividere, con consapevolezza e spesso in cambio di valore.\n\nLa differenza è sottile ma fondamentale. Il first-party data viene inferito dal comportamento (pagine visitate, prodotti cliccati, email aperte). Il zero-party data viene dichiarato: preferenze esplicite, motivazioni, dati di identità, feedback volontari. Un quiz su 'qual è il tuo tipo di pelle?' che finisce in un CRM è zero-party data — il cliente l'ha ceduto attivamente.\n\nI formati che generano zero-party data sono diversi dal tracciamento passivo: quiz interattivi, configuratori, preferenze esplicite nell'onboarding, loyalty program con profili arricchiti, survey post-acquisto contestuali. Sephora, Nike e Spotify sono esempi avanzati di brand che costruiscono il loro vantaggio competitivo sulla qualità del dato zero-party, non sul volume.\n\nIl nodo strategico è il value exchange: perché un consumatore dovrebbe condividere dati? Perché ne riceve qualcosa di concreto in cambio — personalizzazione migliore, sconto, accesso a contenuti esclusivi. Il marketing dell'era post-cookie si gioca sulla qualità della relazione, non sull'intercettazione.\n\nPer i team marketing, questo implica riprogettare l'intera struttura di raccolta dati: dalla dipendenza da Google Analytics e Facebook Pixel verso sistemi propri di CRM enrichment, con una strategia esplicita di valore per l'utente.",
+    "fonte": {
+      "nome": "Forrester Research — Zero-Party Data",
+      "url": "https://www.forrester.com/blogs/straight-from-the-source-collect-zero-party-data-from-consumers/"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 28,
+    "data": "2026-05-14",
+    "categoria": "AI",
+    "tipo": "video",
+    "titolo": "Agenti AI: cosa sono davvero e perché cambiano tutto nel 2025",
+    "contenuto": "Un AI agent non è solo un chatbot — è un sistema che può pianificare, usare strumenti, iterare sui propri errori e completare task complessi in autonomia. In questo video Andrew Ng (fondatore di Coursera e deeplearning.ai, ex Google Brain) spiega la differenza tra i workflow AI 'agentic' e quelli tradizionali e perché questo cambia le aspettative sull'automazione aziendale.\n\nNg descrive quattro pattern chiave degli agenti: reflection (il modello valuta e corregge il proprio output), tool use (accesso a ricerche web, codice, API), planning (suddivisione di task complessi in subtask), e multi-agent collaboration (più modelli che lavorano in parallelo come team).\n\nCapire gli agenti AI è prioritario per chi prende decisioni su automazione, workflow aziendali e investimenti in AI.",
+    "video_id": "sal78ACtGTc",
+    "video_thumb": "https://img.youtube.com/vi/sal78ACtGTc/hqdefault.jpg",
+    "fonte": {
+      "nome": "Andrew Ng — Agentic AI Patterns (Sequoia Capital)",
+      "url": "https://www.youtube.com/watch?v=sal78ACtGTc"
+    },
+    "livello": "avanzato"
   }
 ]
