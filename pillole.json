@@ -6,7 +6,11 @@
     "tipo": "testo",
     "titolo": "Il paradosso della scelta: perché troppe opzioni paralizzano il cliente",
     "contenuto": "Nel 1995 lo psicologo Barry Schwartz condusse un esperimento semplice ma rivoluzionario: in un supermercato mise due bancarelle di marmellate. Una con 6 gusti, l'altra con 24. La bancarella con 24 attirava più persone, ma quella con 6 vendeva 10 volte di più.\n\nQuesta è la legge del paradosso della scelta: più opzioni offri, più il cervello del cliente si blocca in un loop decisionale. Il motivo è neurologico — la corteccia prefrontale, responsabile delle decisioni, si sovraccarica e la risposta istintiva è non scegliere nulla.\n\nIn marketing si traduce così: ogni volta che allarghi troppo il menu, la landing page, il catalogo prodotti o le CTA, stai inconsapevolmente riducendo le conversioni. I brand che convertono di più spesso fanno una cosa sola: riducono le opzioni, guidano la scelta, danno un consiglio esplicito.\n\nLa prossima volta che devi strutturare un'offerta o una pagina, chiediti: sto semplificando o sto esponendo tutto quello che ho? La risposta cambia il risultato.",
-    "fonte": { "nome": "The Paradox of Choice — Barry Schwartz (TED, 2005)", "url": "https://www.ted.com/talks/barry_schwartz_the_paradox_of_choice" }
+    "fonte": {
+      "nome": "The Paradox of Choice — Barry Schwartz (TED, 2005)",
+      "url": "https://www.ted.com/talks/barry_schwartz_the_paradox_of_choice"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 2,
@@ -15,7 +19,11 @@
     "tipo": "testo",
     "titolo": "L'effetto Dunning-Kruger: perché i principianti si sentono esperti",
     "contenuto": "David Dunning e Justin Kruger nel 1999 pubblicarono uno studio che spiegava un fenomeno che tutti abbiamo vissuto: le persone con poca competenza in un campo tendono a sovrastimare le proprie capacità, mentre gli esperti veri spesso si sottovalutano.\n\nIl meccanismo è questo: per riconoscere i propri errori serve la stessa competenza necessaria per non commetterli. Chi sa poco, non sa nemmeno cosa non sa — e questo crea una falsa sicurezza.\n\nNella curva del Dunning-Kruger ci sono quattro fasi: il picco della stupidità (poca esperienza, alta fiducia), la valle della disperazione (cominci a capire quanto non sai), il pendio dell'illuminazione (crescita reale con consapevolezza), e il plateau della padronanza (alta competenza, stima di sé calibrata).\n\nPerché conta nella vita professionale? Perché riconoscere in quale fase sei — tu e le persone con cui lavori — ti dà un vantaggio enorme. Chi è nel picco ha bisogno di essere sfidato, non lusingato. Chi è nella valle ha bisogno di supporto, non di critica.",
-    "fonte": { "nome": "Unskilled and Unaware of It — Kruger & Dunning, Journal of Personality and Social Psychology (1999)", "url": "https://psycnet.apa.org/record/1999-15054-002" }
+    "fonte": {
+      "nome": "Unskilled and Unaware of It — Kruger & Dunning, Journal of Personality and Social Psychology (1999)",
+      "url": "https://psycnet.apa.org/record/1999-15054-002"
+    },
+    "livello": "base"
   },
   {
     "id": 3,
@@ -24,7 +32,11 @@
     "tipo": "testo",
     "titolo": "Il moat competitivo: cosa protegge davvero un'azienda dalla concorrenza",
     "contenuto": "Warren Buffett usò per primo il termine 'moat' (fossato) per descrivere il vantaggio competitivo di un'azienda — quella caratteristica che la protegge dai competitor come un fossato protegge un castello.\n\nEsistono cinque tipi di moat principali: gli effetti di rete (più utenti = più valore, come LinkedIn o WhatsApp), i costi di switching (cambiare fornitore è così costoso che i clienti restano, come i software ERP), le economie di scala (più produci, meno ti costa, come Amazon), i beni intangibili (brevetti, brand, licenze — come Coca-Cola o Nike), e il vantaggio di costo strutturale.\n\nPer chi lavora in strategia, la domanda da farsi non è 'siamo i migliori adesso?' ma 'cosa rende difficile per qualcun altro prendere il nostro posto tra 5 anni?'. Senza fossato, ogni vantaggio è temporaneo.\n\nAnalizzare il moat di un'azienda — la tua o quella di un cliente — è uno degli esercizi più utili in assoluto per capire dove investire e dove difendersi.",
-    "fonte": { "nome": "The Little Book That Builds Wealth — Pat Dorsey (Morningstar, 2008)", "url": "https://www.morningstar.com/company/economic-moat" }
+    "fonte": {
+      "nome": "The Little Book That Builds Wealth — Pat Dorsey (Morningstar, 2008)",
+      "url": "https://www.morningstar.com/company/economic-moat"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 4,
@@ -33,7 +45,11 @@
     "tipo": "testo",
     "titolo": "Cos'è un agente AI e perché sta cambiando tutto",
     "contenuto": "Fino a poco tempo fa, i modelli di AI come ChatGPT erano strumenti reattivi: rispondevano a domande, generavano testi, ma non facevano nulla da soli. Un agente AI è diverso: è un sistema che riceve un obiettivo, pianifica i passi necessari, usa strumenti (ricerca web, email, codice, API) e porta il lavoro a termine in autonomia.\n\nL'analogia migliore è la differenza tra un consulente che ti dà consigli e un collaboratore che esegue. Gli agenti AI eseguono: prenotano riunioni, mandano email, aggiornano database, cercano informazioni e prendono micro-decisioni lungo il percorso.\n\nNel marketing concreto: un agente può monitorare i competitor ogni giorno, scrivere report, postare contenuti, rispondere ai clienti e analizzare le performance — tutto in parallelo e in autonomia.\n\nLa sfida non è tecnologica ma strategica: chi saprà progettare workflow agentici efficaci avrà un moltiplicatore di produttività senza precedenti. Chi non li capisce delegherà a chi li usa. Questo è il vero cambio di paradigma del 2025-2026.",
-    "fonte": { "nome": "Agents — Anthropic Research (2024)", "url": "https://www.anthropic.com/research/building-effective-agents" }
+    "fonte": {
+      "nome": "Agents — Anthropic Research (2024)",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 5,
@@ -42,7 +58,11 @@
     "tipo": "testo",
     "titolo": "Il bias di conferma: il filtro invisibile che distorce la realtà",
     "contenuto": "Il bias di conferma è la tendenza del cervello a cercare, interpretare e ricordare le informazioni in modo che confermino ciò che già crede. Non è pigrizia mentale — è un meccanismo evolutivo: elaborare ogni informazione da zero sarebbe troppo costoso energeticamente.\n\nIl problema è che questo filtro invisibile distorce sistematicamente le decisioni. Un manager convinto che una campagna funzioni ignorerà i dati negativi e amplificherà quelli positivi. Un consumatore che ha scelto un brand tenderà a trovare conferme di aver fatto bene — anche se i segnali dicono il contrario.\n\nCome difendersi? Tre tattiche concrete: cercare attivamente dati che contraddicono la tua ipotesi (falsificazione), chiedere opinioni a persone con prospettive diverse (devil's advocate), e separare il momento di raccolta dati dal momento di interpretazione.\n\nIn strategia, il bias di conferma è responsabile di molti flop: prodotti lanciati su ricerche di mercato mal interpretate, campagne continuate troppo a lungo, mercati sottovalutati.",
-    "fonte": { "nome": "Thinking, Fast and Slow — Daniel Kahneman (2011)", "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/" }
+    "fonte": {
+      "nome": "Thinking, Fast and Slow — Daniel Kahneman (2011)",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/"
+    },
+    "livello": "base"
   },
   {
     "id": 6,
@@ -51,7 +71,11 @@
     "tipo": "testo",
     "titolo": "Il prezzo 9,99: perché funziona ancora nel 2026",
     "contenuto": "Il prezzo che finisce con ,99 è una delle tecniche di marketing più studiate e confermate dalla neurosciienza. Funziona per tre motivi distinti che si sommano.\n\nPrimo: il cervello legge i numeri da sinistra. Un prezzo di 9,99 viene codificato come 'vicino a 9' anche se è praticamente 10. Questo si chiama 'left-digit anchoring effect' ed è documentato in decine di studi.\n\nSecondo: i prezzi dispari trasmettono un segnale implicito di offerta, come se il prezzo fosse stato ridotto al massimo. I prezzi tondi (10,00) invece comunicano premium, esclusività, status.\n\nTerzo: .99 riduce la 'pain of paying', il fastidio neurologico che si attiva nel cervello quando spendiamo. Meno il prezzo sembra 'rotondo', meno il sistema limbico si oppone all'acquisto.\n\nLa regola pratica: usa ,99 per prodotti mass market dove il volume conta. Usa prezzi tondi e cifre alte per prodotti premium dove il prezzo alto è parte del valore percepito. Hermès non fa mai sconti. Non è un caso.",
-    "fonte": { "nome": "Prices Ending in 9: Evidence from Field Experiments — Anderson & Simester, Quantitative Marketing and Economics (2003)", "url": "https://link.springer.com/article/10.1023/A:1023581927405" }
+    "fonte": {
+      "nome": "Prices Ending in 9: Evidence from Field Experiments — Anderson & Simester, Quantitative Marketing and Economics (2003)",
+      "url": "https://link.springer.com/article/10.1023/A:1023581927405"
+    },
+    "livello": "base"
   },
   {
     "id": 7,
@@ -60,7 +84,11 @@
     "tipo": "testo",
     "titolo": "L'interesse composto: il concetto che Einstein chiamava l'ottava meraviglia",
     "contenuto": "L'interesse composto è il meccanismo per cui i guadagni di un investimento generano a loro volta altri guadagni. In pratica: non guadagni solo sul capitale iniziale, ma anche sugli interessi accumulati. E questo, nel tempo, crea una crescita esponenziale.\n\nEsempio concreto: investi 1.000€ con un rendimento annuo del 7%. Dopo 10 anni hai 1.967€. Dopo 20 anni hai 3.870€. Dopo 30 anni hai 7.612€. Non hai fatto nulla — solo lasciato lavorare il tempo.\n\nLa formula è semplice: C × (1 + r)^n, dove C è il capitale, r il tasso annuo, n gli anni. Ma la cosa davvero importante non è la formula — è iniziare presto. Ogni anno che aspetti vale molto più di quanto sembri.\n\nL'altro lato della medaglia: l'interesse composto funziona anche al contrario, con i debiti. Un mutuo, un prestito al consumo, un debito sulla carta di credito — crescono con la stessa logica. Capire questo meccanismo ti rende più libero.",
-    "fonte": { "nome": "The Snowball: Warren Buffett and the Business of Life — Alice Schroeder (2008)", "url": "https://www.investopedia.com/terms/c/compoundinterest.asp" }
+    "fonte": {
+      "nome": "The Snowball: Warren Buffett and the Business of Life — Alice Schroeder (2008)",
+      "url": "https://www.investopedia.com/terms/c/compoundinterest.asp"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 8,
@@ -69,16 +97,24 @@
     "tipo": "testo",
     "titolo": "I cookie di terze parti sono morti: cosa cambia per il marketing",
     "contenuto": "Per vent'anni il marketing digitale ha girato intorno ai cookie di terze parti: piccoli file che i siti web usavano per tracciarti su internet, capire i tuoi interessi e mostrarti pubblicità mirata. Google ha dichiarato la loro fine, Apple le ha già bloccate su Safari, Firefox le blocca da anni.\n\nCosa significa in pratica? Il remarketing classico (quel banner che ti segue dappertutto dopo aver visto un prodotto) diventa sempre meno efficace. Il targeting basato su dati demografici e comportamentali di terze parti si restringe. Le campagne DEM comprate su liste esterne perdono precisione.\n\nCosa lo sostituisce? Tre cose: i first-party data (dati che raccogli tu direttamente — email, acquisti, interazioni), le audience basate su contesto (pubblicità su un articolo su scarpe da corsa, non sulla persona che le cerca), e i modelli predittivi basati su AI addestrati sui tuoi dati.\n\nPer i brand il messaggio è chiaro: chi non ha costruito una relazione diretta con il proprio pubblico è in ritardo. Newsletter, community, loyalty program — non sono nice-to-have. Sono infrastruttura.",
-    "fonte": { "nome": "Google's Privacy Sandbox — developers.google.com", "url": "https://developers.google.com/privacy-sandbox" }
+    "fonte": {
+      "nome": "Google's Privacy Sandbox — developers.google.com",
+      "url": "https://developers.google.com/privacy-sandbox"
+    },
+    "livello": "avanzato"
   },
   {
     "id": 9,
     "data": "2026-05-13",
-    "categoria": "Storia & Geopolitica",
+    "categoria": "Geopolitica",
     "tipo": "testo",
     "titolo": "La guerra dei chip: perché Taiwan è al centro del mondo",
     "contenuto": "TSMC, azienda taiwanese fondata nel 1987, produce oltre il 90% dei chip più avanzati del pianeta — quelli che fanno girare iPhone, server AI, sistemi militari e automobili moderne. Questo ha trasformato Taiwan nell'isola geopoliticamente più importante del mondo.\n\nCina e USA si contendono il controllo di questa filiera da anni. Gli Stati Uniti hanno varato il CHIPS Act (2022): 52 miliardi di dollari per riportare la produzione di semiconduttori in America. L'Europa ha seguito con il suo European Chips Act. La Cina investe centinaia di miliardi per costruire una filiera indipendente, ma è ancora indietro di 5-7 anni sul processo produttivo.\n\nPerché è importante per tutti? Perché chi controlla i chip controlla l'economia digitale. Le sanzioni americane che hanno bloccato l'export di chip avanzati verso la Cina nel 2022-2023 hanno frenato lo sviluppo AI cinese più di qualsiasi altra misura. Huawei ha risposto con il Mate 60 Pro — un chip 7nm prodotto da SMIC — dimostrando che la Cina avanza, ma lentamente.\n\nLo scenario che tutti temono: un'invasione cinese di Taiwan bloccherebbe la produzione globale di chip avanzati. Non è fantascienza — è il rischio geopolitico numero uno degli anni 2020.",
-    "fonte": { "nome": "Chip War — Chris Miller (2022) / Reuters Semiconductors Tracker", "url": "https://www.reuters.com/technology/semiconductors/" }
+    "fonte": {
+      "nome": "Chip War — Chris Miller (2022) / Reuters Semiconductors Tracker",
+      "url": "https://www.reuters.com/technology/semiconductors/"
+    },
+    "livello": "avanzato"
   },
   {
     "id": 10,
@@ -87,7 +123,11 @@
     "tipo": "testo",
     "titolo": "La regola di Mehrabian: come comunichiamo davvero",
     "contenuto": "Nel 1967 Albert Mehrabian pubblicò una ricerca che è diventata uno dei dati più citati — e più fraintesi — della comunicazione. La sua conclusione: nella comunicazione emotiva, il 55% del messaggio passa dal linguaggio del corpo, il 38% dal tono della voce, e solo il 7% dalle parole.\n\nAttenzione: questo non significa che le parole contino il 7% in assoluto. La ricerca riguardava specificamente i messaggi emotivi contraddittori — quando dici 'sto bene' con una voce triste e le spalle basse. In quel caso, vince il non-verbale.\n\nMa il principio generale regge: la credibilità e il peso emotivo di un messaggio dipendono enormemente da come viene consegnato. Un discorso brillante letto con voce piatta non convince. Una frase semplice detta con convinzione può cambiare una stanza.\n\nPer chi vuole comunicare meglio — in un pitch, in una riunione, in una presentazione — la priorità non è trovare le parole giuste. È lavorare su presenza, ritmo, contatto visivo, pausa. Le parole vengono dopo.",
-    "fonte": { "nome": "Silent Messages — Albert Mehrabian (1971) / mehrabian.com", "url": "http://www.kaaj.com/psych/smorder.html" }
+    "fonte": {
+      "nome": "Silent Messages — Albert Mehrabian (1971) / mehrabian.com",
+      "url": "http://www.kaaj.com/psych/smorder.html"
+    },
+    "livello": "base"
   },
   {
     "id": 11,
@@ -96,7 +136,11 @@
     "tipo": "testo",
     "titolo": "La regola delle 2 ore: quando il tuo cervello lavora davvero",
     "contenuto": "La ricerca sulla produttività cognitiva mostra un pattern costante: il cervello umano ha una finestra di lavoro profondo di circa 90-120 minuti prima di aver bisogno di recupero. Non è una questione di volontà — è fisiologia. Il sistema nervoso alterna naturalmente cicli di alta attivazione e recupero, i cosiddetti cicli ultradian.\n\nCosa significa in pratica? Che lavorare 8 ore filate è un'illusione — in realtà lavori 2 ore ad alta qualità e 6 ore in modalità zombie, rispondendo email e aspettando che la giornata finisca.\n\nLa strategia dei top performer (documentata da Cal Newport in Deep Work e da Anders Ericsson nelle sue ricerche sui violinisti d'élite) è diversa: blocchi da 90 minuti di lavoro vero, poi pausa vera (non scorrere Instagram — proprio staccare), poi un altro blocco.\n\nIl paradosso: lavorare meno ore ma con più intenzione produce più risultati. I migliori violinisti studiati da Ericsson praticavano meno ore dei medi — ma in modo più deliberato e con pause strutturate.",
-    "fonte": { "nome": "Deep Work — Cal Newport (2016) / Peak — Anders Ericsson (2016)", "url": "https://calnewport.com/books/deep-work/" }
+    "fonte": {
+      "nome": "Deep Work — Cal Newport (2016) / Peak — Anders Ericsson (2016)",
+      "url": "https://calnewport.com/books/deep-work/"
+    },
+    "livello": "base"
   },
   {
     "id": 12,
@@ -105,7 +149,11 @@
     "tipo": "testo",
     "titolo": "Lo stoicismo in pratica: il controllo dicotomico",
     "contenuto": "Marco Aurelio era imperatore di Roma — l'uomo più potente del mondo conosciuto. Eppure ogni mattina scriveva a se stesso di non sprecare energie su ciò che non poteva controllare. Questo è il cuore dello stoicismo: la distinzione tra ciò che dipende da noi e ciò che non dipende.\n\nEpitteto, ex schiavo diventato filosofo, lo formulò così: alcune cose sono in nostro potere — opinioni, impulsi, desideri, avversioni. Tutto il resto — il corpo, la reputazione, il lavoro, gli altri — non è in nostro potere. La sofferenza nasce dal confondere le due categorie.\n\nIn pratica: puoi controllare l'impegno che metti in una presentazione, non la reazione del cliente. Puoi controllare la tua risposta a una critica, non la critica stessa. Puoi controllare le tue abitudini, non i tuoi risultati immediati.\n\nNon è fatalismo — è il contrario. È energia concentrata dove conta. I moderni coach di performance, le terapie cognitive, i metodi di resilienza aziendale attingono tutti da questo principio di 2300 anni fa. Funziona ancora.",
-    "fonte": { "nome": "Enchiridion — Epitteto (ca. 135 d.C.) / Meditations — Marco Aurelio", "url": "https://dailystoic.com/enchiridion/" }
+    "fonte": {
+      "nome": "Enchiridion — Epitteto (ca. 135 d.C.) / Meditations — Marco Aurelio",
+      "url": "https://dailystoic.com/enchiridion/"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 13,
@@ -114,7 +162,11 @@
     "tipo": "testo",
     "titolo": "Perché il design minimalista vende di più",
     "contenuto": "Apple, Muji, Aesop, Loro Piana. Cosa hanno in comune? Un design che toglie invece di aggiungere. E performance di brand tra le più solide al mondo. Non è una coincidenza.\n\nIl minimalismo nel design non è solo estetica — è strategia cognitiva. Un'interfaccia, un packaging, un negozio con pochi elementi riduce il carico cognitivo: il cervello spende meno energia per elaborare l'ambiente e ne ha di più per apprezzare il prodotto. Questo genera una sensazione di comfort e qualità percepita.\n\nIl designer Dieter Rams (che ha ispirato Jony Ive di Apple) aveva 10 principi. Il più famoso: un buon design è il meno design possibile. Non significa vuoto — significa che ogni elemento presente deve guadagnarsi il suo posto.\n\nPer chi lavora in comunicazione: la regola vale anche per testi, slide, campagne. Ogni parola in più che aggiungi riduce il peso di quelle che rimangono. Ogni elemento visivo in più è un concorrente per l'attenzione. Eliminare è la competenza più rara e più potente nel design.",
-    "fonte": { "nome": "10 Principles of Good Design — Dieter Rams / Vitsœ", "url": "https://www.vitsoe.com/gb/about/good-design" }
+    "fonte": {
+      "nome": "10 Principles of Good Design — Dieter Rams / Vitsœ",
+      "url": "https://www.vitsoe.com/gb/about/good-design"
+    },
+    "livello": "intermedio"
   },
   {
     "id": 14,
@@ -125,7 +177,11 @@
     "contenuto": "Una delle spiegazioni più chiare su come funzionano i Large Language Model come ChatGPT. In 10 minuti capisci cosa vuol dire 'prevedere la prossima parola', perché i modelli a volte sbagliano con sicurezza, e cosa li rende davvero diversi da un motore di ricerca.\n\nPerfetto se vuoi avere le basi per capire l'AI senza dover leggere paper accademici.",
     "video_id": "wjZofJX0v4M",
     "video_thumb": "https://img.youtube.com/vi/wjZofJX0v4M/hqdefault.jpg",
-    "fonte": { "nome": "3Blue1Brown — YouTube", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M" }
+    "fonte": {
+      "nome": "3Blue1Brown — YouTube",
+      "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"
+    },
+    "livello": "avanzato"
   },
   {
     "id": 15,
@@ -136,6 +192,10 @@
     "contenuto": "Simon Sinek spiega perché Apple, Martin Luther King e i Wright Brothers hanno avuto successo dove altri con le stesse risorse hanno fallito. La risposta è il Golden Circle: Start With Why.\n\nUno dei TED talk più visti di sempre. 18 minuti che cambiano come pensi al posizionamento di un brand — e alla tua comunicazione personale.",
     "video_id": "qp0HIF3SfI4",
     "video_thumb": "https://img.youtube.com/vi/qp0HIF3SfI4/hqdefault.jpg",
-    "fonte": { "nome": "Simon Sinek — TED2009", "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action" }
+    "fonte": {
+      "nome": "Simon Sinek — TED2009",
+      "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+    },
+    "livello": "intermedio"
   }
 ]
