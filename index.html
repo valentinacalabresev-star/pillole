@@ -74,6 +74,19 @@
     .cat-badge { font-size:.68rem; font-weight:700; padding:3px 9px; border-radius:10px; letter-spacing:.4px; text-transform:uppercase; }
     .type-badge { font-size:.68rem; color:var(--text3); background:var(--surface2); padding:3px 8px; border-radius:8px; }
     .read-badge { font-size:.65rem; color:var(--green); background:rgba(34,197,94,.12); padding:3px 8px; border-radius:8px; }
+    .livello-badge { font-size:.62rem; font-weight:700; padding:2px 7px; border-radius:8px; text-transform:uppercase; letter-spacing:.3px; }
+    .livello-base { background:#14532d; color:#86efac; }
+    .livello-intermedio { background:#713f12; color:#fde047; }
+    .livello-avanzato { background:#7f1d1d; color:#fca5a5; }
+    .rating-wrap { display:flex; align-items:center; gap:8px; margin-top:12px; padding-top:12px; border-top:1px solid var(--border); }
+    .rating-label { font-size:.75rem; color:var(--text3); }
+    .rating-btn { font-size:.73rem; font-weight:600; padding:4px 12px; border-radius:20px; border:1px solid var(--border2); background:var(--surface2); color:var(--text2); cursor:pointer; transition:all .2s; }
+    .rating-btn:hover { border-color:var(--accent2); color:var(--accent2); }
+    .rating-btn.active-sapevo { background:#14532d; border-color:#86efac; color:#86efac; }
+    .rating-btn.active-novita { background:#1e1b4b; border-color:#a78bfa; color:#a78bfa; }
+    .rating-badge { font-size:.63rem; padding:2px 8px; border-radius:8px; }
+    .rating-badge-sapevo { background:#14532d; color:#86efac; }
+    .rating-badge-novita { background:#1e1b4b; color:#a78bfa; }
     .card-actions { display:flex; align-items:center; gap:6px; }
     .icon-btn { width:28px; height:28px; border-radius:50%; border:1px solid var(--border); background:var(--surface2); display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer; transition:all .2s; flex-shrink:0; }
     .icon-btn.saved { background:rgba(250,204,21,.12); border-color:rgba(250,204,21,.3); }
@@ -213,7 +226,7 @@ const CAT_CLASS = {
   'Marketing':'c-marketing','AI':'c-ai','Psicologia':'c-psicologia',
   'Business':'c-business','Scienze Comportamentali':'c-scienze',
   'Neuromarketing':'c-neuromark','Finanza':'c-finanza','Digital':'c-digital',
-  'Storia & Geopolitica':'c-storia','Comunicazione':'c-comunicaz',
+  'Geopolitica':'c-storia','Comunicazione':'c-comunicaz',
   'Performance':'c-performance','Filosofia':'c-filosofia','Arte & Design':'c-arte'
 };
 const CAT_COLORS = {
@@ -225,7 +238,7 @@ const CAT_COLORS = {
   'Neuromarketing':{bg:'#f472b620',text:'#f472b6'},
   'Finanza':{bg:'#facc1520',text:'#facc15'},
   'Digital':{bg:'#60a5fa20',text:'#60a5fa'},
-  'Storia & Geopolitica':{bg:'#f8717120',text:'#f87171'},
+  'Geopolitica':{bg:'#f8717120',text:'#f87171'},
   'Comunicazione':{bg:'#34d39920',text:'#34d399'},
   'Performance':{bg:'#a78bfa20',text:'#a78bfa'},
   'Filosofia':{bg:'#fbbf2420',text:'#fbbf24'},
@@ -249,19 +262,13 @@ function setSyncDot(mode){
 }
 
 async function loadStato(){
-  function showLoadInfo(source, count){
-    let el = document.getElementById('load-info');
-    if(!el){ el=document.createElement('div'); el.id='load-info'; el.style='position:fixed;top:60px;right:8px;background:#1a1a2e;border:1px solid #ffffff30;color:#a0a0c0;padding:4px 8px;border-radius:6px;font-size:.7rem;z-index:9999;'; document.body.appendChild(el); }
-    el.textContent = source + ' · ' + count + ' righe';
-    setTimeout(()=>{ if(el) el.remove(); }, 5000);
-  }
   try {
-    const r = await fetch(SB_URL + '/rest/v1/pillole_stato?select=id,letta,salvata,nascosta,aggiornata_il', {
+    const r = await fetch(SB_URL + '/rest/v1/pillole_stato?select=id,letta,salvata,nascosta,aggiornata_il,rating', {
       headers: SB_HEADERS
     });
     if(!r.ok) throw new Error('fetch ' + r.status);
     const rows = await r.json();
-    stato = { saved:[], read:[], hidden:{}, quiz_wrong:{} };
+    stato = { saved:[], read:[], hidden:{}, quiz_wrong:{}, rating:{} };
     const now = Date.now();
     rows.forEach(row => {
       const rid = isNaN(row.id) ? row.id : Number(row.id);
@@ -271,12 +278,12 @@ async function loadStato(){
         const ts = row.aggiornata_il ? new Date(row.aggiornata_il).getTime() : now;
         if(now - ts < HIDDEN_TTL) stato.hidden[rid] = ts;
       }
+      if(row.rating) stato.rating[rid] = row.rating;
     });
     localStorage.setItem('p_stato', JSON.stringify(stato));
-    showLoadInfo('☁️ Supabase', rows.length);
   } catch(e) {
-    stato = JSON.parse(localStorage.getItem('p_stato')||'{"saved":[],"read":[],"hidden":{},"quiz_wrong":{}}');
-    showLoadInfo('💾 LocalStorage (err: ' + e.message + ')', (stato.saved||[]).length + (stato.read||[]).length);
+    stato = JSON.parse(localStorage.getItem('p_stato')||'{"saved":[],"read":[],"hidden":{},"quiz_wrong":{},"rating":{}}');
+    if(!stato.rating) stato.rating = {};
   }
 }
 
@@ -296,9 +303,10 @@ async function saveStato(){
   try {
     // Usa una mappa per deduplicare: stessa pillola non appare due volte
     const map = {};
-    (stato.saved||[]).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].salvata=true; });
-    (stato.read||[]).forEach(id  => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].letta=true; });
-    Object.keys(stato.hidden||{}).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false}; map[k].nascosta=true; });
+    (stato.saved||[]).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false,rating:null}; map[k].salvata=true; });
+    (stato.read||[]).forEach(id  => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false,rating:null}; map[k].letta=true; });
+    Object.keys(stato.hidden||{}).forEach(id => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false,rating:null}; map[k].nascosta=true; });
+    Object.entries(stato.rating||{}).forEach(([id,v]) => { const k=String(id); if(!map[k]) map[k]={salvata:false,letta:false,nascosta:false,rating:null}; map[k].rating=v; });
     const rows = Object.entries(map).map(([id, fields]) => ({
       id, ...fields, aggiornata_il: new Date().toISOString()
     }));
@@ -352,6 +360,32 @@ function markRead(id,card){
   if(wrap) wrap.innerHTML='<span style="font-size:.8rem;color:var(--green)">✓ Segnato come letto</span>';
   const slot=card.querySelector('.read-badge-slot');
   if(slot) slot.innerHTML='<span class="read-badge">✓ letto</span>';
+}
+
+async function setRating(id, value, card){
+  if(!stato.rating) stato.rating = {};
+  stato.rating[id] = value;
+  localStorage.setItem('p_stato', JSON.stringify(stato));
+  // Aggiorna bottoni nella card
+  card.querySelectorAll('[data-rating]').forEach(btn=>{
+    btn.className='rating-btn'+(btn.dataset.rating===value?' active-'+value:'');
+  });
+  // Aggiorna badge nella card-meta
+  const slot=card.querySelector('.read-badge-slot');
+  const existing=card.querySelector('.rating-badge');
+  if(existing) existing.remove();
+  const badge=document.createElement('span');
+  badge.className='rating-badge rating-badge-'+value;
+  badge.textContent=value==='sapevo'?'lo sapevo già':'novità';
+  if(slot) slot.parentNode.insertBefore(badge, slot.nextSibling);
+  // Sync Supabase
+  try {
+    await fetch(SB_URL + '/rest/v1/pillole_stato', {
+      method:'POST',
+      headers:{...SB_HEADERS,'Prefer':'resolution=merge-duplicates'},
+      body:JSON.stringify({id:String(id), rating:value, aggiornata_il:new Date().toISOString()})
+    });
+  } catch(e){ /* silent */ }
 }
 
 function hideCard(id,e){
@@ -410,14 +444,28 @@ function buildCard(p,index,opts={}){
     ?`<button class="icon-btn" title="Ripristina" onclick="unhideCard(${p.id});event.stopPropagation()">↩</button>`
     :`<button class="icon-btn" title="Nascondi" onclick="hideCard(${p.id},event)">✕</button>`;
 
+  const livelloClass = p.livello ? 'livello-'+p.livello : '';
+  const livelloHtml = p.livello ? `<span class="livello-badge ${livelloClass}">${p.livello}</span>` : '';
+  const ratingVal = stato.rating && stato.rating[p.id];
+  const ratingBadgeHtml = ratingVal
+    ? `<span class="rating-badge rating-badge-${ratingVal}">${ratingVal==='sapevo'?'lo sapevo già':'novità'}</span>`
+    : '';
+  const ratingWrapHtml = `<div class="rating-wrap">
+      <span class="rating-label">Ti era nota?</span>
+      <button class="rating-btn${ratingVal==='sapevo'?' active-sapevo':''}" data-rating="sapevo" data-rid="${p.id}">Lo sapevo già</button>
+      <button class="rating-btn${ratingVal==='novita'?' active-novita':''}" data-rating="novita" data-rid="${p.id}">Novità</button>
+    </div>`;
+
   card.innerHTML=`
     <div class="card-bar ${cc}"></div>
     <div class="card-inner">
       <div class="card-top">
         <div class="card-meta">
           <span class="cat-badge" style="background:${cs.bg};color:${cs.text}">${p.categoria}</span>
+          ${livelloHtml}
           ${isVideo?'<span class="type-badge">▶ video</span>':''}
           <span class="read-badge-slot">${readLabel}</span>
+          ${ratingBadgeHtml}
         </div>
         <div class="card-actions">
           <button class="icon-btn ${isSaved(p.id)?'saved':''}" data-saveid="${p.id}">${isSaved(p.id)?'🔖':'🤍'}</button>
@@ -431,6 +479,7 @@ function buildCard(p,index,opts={}){
       ${videoEmbed}
       ${fonteHtml}
       ${markReadHtml}
+      ${ratingWrapHtml}
       <div class="card-footer">
         <span class="read-more">${isVideo?'Guarda & leggi':'Leggi tutto'}</span>
         <div class="toggle-icon">▾</div>
@@ -440,6 +489,9 @@ function buildCard(p,index,opts={}){
   card.querySelector('[data-saveid]').addEventListener('click',(e)=>toggleSave(p.id,card.querySelector('[data-saveid]'),e));
   const mrBtn=card.querySelector('.mark-read-yes');
   if(mrBtn) mrBtn.addEventListener('click',(e)=>{ e.stopPropagation(); markRead(p.id,card); });
+  card.querySelectorAll('[data-rating]').forEach(btn=>{
+    btn.addEventListener('click',(e)=>{ e.stopPropagation(); setRating(p.id, btn.dataset.rating, card); });
+  });
   card.addEventListener('click',()=>{
     card.classList.toggle('expanded');
     const rm=card.querySelector('.read-more');
@@ -508,7 +560,7 @@ const QUIZ_BANK = [
   { cat:'Neuromarketing', q:'Perché i prezzi che finiscono in .99 funzionano sul cervello?', opts:['Perché sembrano più economici grazie al left-digit anchoring','Perché i clienti fanno meglio i conti','Perché il 9 è un numero fortunato','Perché le aziende risparmiano'], correct:0, exp:'Il cervello legge da sinistra: 9,99 viene codificato come "vicino a 9", non a 10. Left-digit anchoring.' },
   { cat:'Finanza', q:'Se investi €1.000 al 7% annuo con interesse composto, dopo 30 anni quanto hai circa?', opts:['€2.100','€3.100','€7.600','€15.000'], correct:2, exp:'€1.000 × (1+0.07)^30 ≈ €7.612. L\'interesse composto crea crescita esponenziale nel tempo.' },
   { cat:'Digital', q:'Cosa sono i "first-party data"?', opts:['Dati comprati da liste esterne','Dati raccolti direttamente dall\'azienda attraverso le proprie interazioni','Dati forniti da Google','Dati demografici pubblici'], correct:1, exp:'First-party = dati tuoi: email, acquisti, comportamento sul sito. Sono l\'asset più prezioso nel marketing post-cookie.' },
-  { cat:'Storia & Geopolitica', q:'Perché Taiwan è così strategica geopoliticamente?', opts:['Per le sue riserve petrolifere','Perché produce oltre il 90% dei chip avanzati del mondo (TSMC)','Per la sua posizione militare nel Pacifico','Per i suoi accordi commerciali con l\'Europa'], correct:1, exp:'TSMC produce i chip più avanzati del pianeta. Chi controlla Taiwan controlla l\'economia digitale globale.' },
+  { cat:'Geopolitica', q:'Perché Taiwan è così strategica geopoliticamente?', opts:['Per le sue riserve petrolifere','Perché produce oltre il 90% dei chip avanzati del mondo (TSMC)','Per la sua posizione militare nel Pacifico','Per i suoi accordi commerciali con l\'Europa'], correct:1, exp:'TSMC produce i chip più avanzati del pianeta. Chi controlla Taiwan controlla l\'economia digitale globale.' },
   { cat:'Comunicazione', q:'Secondo Mehrabian, in un messaggio emotivo contraddittorio quanto contano le parole?', opts:['55%','38%','7%','50%'], correct:2, exp:'7% parole, 38% tono di voce, 55% linguaggio del corpo. Il come conta più del cosa.' },
   { cat:'Performance', q:'Quanto dura circa la finestra ottimale di lavoro profondo secondo i cicli ultradian?', opts:['30 minuti','45 minuti','90-120 minuti','4-5 ore'], correct:2, exp:'I cicli ultradian durano 90-120 minuti. Poi il cervello ha bisogno di recupero vero.' },
   { cat:'Filosofia', q:'Qual è il principio centrale dello stoicismo secondo Epitteto?', opts:['Tutto è casuale e non controllabile','Bisogna controllare le emozioni completamente','Distinguere ciò che dipende da noi da ciò che non dipende','La felicità si trova nel piacere fisico'], correct:2, exp:'La dicotomia del controllo: energia solo su ciò che puoi influenzare.' },
@@ -517,7 +569,7 @@ const QUIZ_BANK = [
 ];
 
 const PROF_CATS = ['Marketing','AI','Business','Scienze Comportamentali','Neuromarketing','Finanza','Digital'];
-const CULT_CATS = ['Psicologia','Storia & Geopolitica','Comunicazione','Performance','Filosofia','Arte & Design'];
+const CULT_CATS = ['Psicologia','Geopolitica','Comunicazione','Performance','Filosofia','Arte & Design'];
 
 let quizQueue=[], quizIndex=0, quizScore=0, quizAnswered=false;
 
