@@ -29,10 +29,10 @@
       --text:#f0f0fa; --text2:#a0a0c0; --text3:#6060a0;
       --accent:#7c3aed; --accent2:#a78bfa; --green:#22c55e; --red:#ef4444; --yellow:#facc15;
     }
-    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif; min-height:100vh; overflow-x:hidden; padding-bottom:80px; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif; min-height:100vh; overflow-x:hidden; padding-bottom:80px; padding-top:100px; }
     body::before { content:''; position:fixed; top:-200px; left:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%); pointer-events:none; z-index:0; }
 
-    .header { position:sticky; top:0; z-index:100; background:rgba(8,8,16,.9); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:14px 18px 0; }
+    .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(8,8,16,.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:14px 18px 0; }
     .header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
     .logo { display:flex; align-items:center; gap:8px; }
     .logo-icon { width:32px; height:32px; background:linear-gradient(135deg,#7c3aed,#a78bfa); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
@@ -152,7 +152,7 @@
 
     /* ── NEWS VIEW ─────────────────────────────────────────────────── */
     #view-news { background:#f8f7f4; padding:16px; }
-    .news-header { position:sticky; top:0; z-index:100; background:rgba(248,247,244,.95); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid #e8e5e0; padding:16px 18px 12px; margin-bottom:0; }
+    .news-header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(248,247,244,.97); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid #e8e5e0; padding:16px 18px 12px; margin-bottom:0; }
     .news-header-title { font-size:1.4rem; font-weight:800; color:#0f0f1a; letter-spacing:-.3px; margin-bottom:10px; }
     .news-title { font-size:1.4rem; font-weight:800; color:#1a1a1a; letter-spacing:-.3px; margin-bottom:12px; }
     .news-filters { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px; flex-wrap:nowrap; }
@@ -262,7 +262,7 @@
     <div class="news-header-title">News</div>
     <div class="news-filters" id="newsFilters"></div>
   </div>
-  <div class="news-list" id="newsFeed" style="padding:16px 0;"></div>
+  <div class="news-list" id="newsFeed" style="padding:90px 0 16px;"></div>
 </div>
 
 <div class="bottom-nav">
