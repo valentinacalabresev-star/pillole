@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
   <title>Pillole · Valentina</title>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -29,10 +29,10 @@
       --text:#f0f0fa; --text2:#a0a0c0; --text3:#6060a0;
       --accent:#7c3aed; --accent2:#a78bfa; --green:#22c55e; --red:#ef4444; --yellow:#facc15;
     }
-    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif; min-height:100vh; overflow-x:hidden; padding-bottom:80px; padding-top:100px; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif; min-height:100vh; overflow-x:hidden; padding-bottom:calc(80px + env(safe-area-inset-bottom)); }
     body::before { content:''; position:fixed; top:-200px; left:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%); pointer-events:none; z-index:0; }
 
-    .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(8,8,16,.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:14px 18px 0; }
+    .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(8,8,16,.94); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:14px 18px 0; padding-top:max(14px, calc(env(safe-area-inset-top) + 8px)); }
     .header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
     .logo { display:flex; align-items:center; gap:8px; }
     .logo-icon { width:32px; height:32px; background:linear-gradient(135deg,#7c3aed,#a78bfa); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
@@ -863,6 +863,19 @@ function renderSavedNews(){
 }
 
 init();
+</script>
+
+<script>
+// Compensa l'header fixed misurando la sua altezza reale
+function fixHeaderOffset() {
+  var h = document.querySelector('.header');
+  if (h) {
+    document.body.style.paddingTop = h.offsetHeight + 'px';
+  }
+}
+fixHeaderOffset();
+window.addEventListener('resize', fixHeaderOffset);
+window.addEventListener('orientationchange', function(){ setTimeout(fixHeaderOffset, 200); });
 </script>
 </body>
 </html>
