@@ -148,5 +148,65 @@
     "categoria": "Ricerche & Report",
     "riassunto": "La 24ª edizione dello studio Bain-Altagamma stima la spesa globale di lusso a 1.440 miliardi di euro nel 2025, in calo marginale dell'1-3% a cambi correnti rispetto al 2024. Il mercato rimane il 12-14% sopra i livelli pre-Covid del 2019. Le esperienze di lusso (wellness, hospitality, fine dining) continuano a crescere più dei beni, mentre il mercato dei beni personali di lusso ha subito una normalizzazione. Per il 2026 Bain prevede un ritorno a una crescita moderata del 3-5%, trainata dagli USA e da una ripresa graduale della Cina.",
     "paywall": false
+  },
+  {
+    "id": 16,
+    "data": "2026-04-14",
+    "titolo": "Kering Q1 2026: ricavi -6,2%, Gucci crolla -14,3%. CEO de Meo lancia il piano 'ReconKering'",
+    "fonte": "WWD / Kering",
+    "fonte_url": "https://wwd.com/business-news/financial/kering-q1-2026-results-meo-1238911937/",
+    "categoria": "Luxury",
+    "riassunto": "Kering ha chiuso il primo trimestre 2026 con ricavi di 3,57 miliardi di euro (-6,2% reported, flat organico). Gucci — il brand principale — ha segnato -14,3% a 1,35 miliardi, con debolezza strutturale in Europa occidentale e Cina. Il nuovo CEO Luca de Meo (ex Renault) ha presentato il piano 'ReconKering' il 16 aprile a Firenze: target di raddoppio del margine operativo entro il 2030, nomina di Francesca Bellettini come CEO Gucci, e separazione del polo gioielleria (Pomellato, Boucheron, Qeelin) in entità autonoma. Kering ha inoltre ceduto la divisione beauty a L'Oréal per 4 miliardi e alienato asset immobiliari per ridurre il debito.",
+    "paywall": false
+  },
+  {
+    "id": 17,
+    "data": "2026-03-31",
+    "titolo": "L'Oréal acquisisce Kering Beauté per 4 miliardi: include House of Creed e licenze Bottega Veneta",
+    "fonte": "L'Oréal / Il Sole 24 Ore",
+    "fonte_url": "https://www.loreal.com/en/press-release/group/loreal-completes-the-acquisition-of-kering-beaute/",
+    "categoria": "Beauty",
+    "riassunto": "Il 31 marzo 2026 L'Oréal ha finalizzato l'acquisizione di Kering Beauté per 4 miliardi di euro. L'operazione include la House of Creed — una delle principali maison di profumeria di lusso al mondo — e licenze esclusive cinquantennali per la creazione e distribuzione di prodotti beauty e fragranze con i marchi Bottega Veneta e altri brand Kering. Per L'Oréal è uno dei maggiori acquisti nella storia recente e consolida ulteriormente la sua posizione nel segmento fragranze prestige. Per Kering, l'operazione fa parte del piano di riduzione del debito avviato da de Meo.",
+    "paywall": false
+  },
+  {
+    "id": 18,
+    "data": "2026-05-20",
+    "titolo": "Google I/O 2026: la barra di ricerca diventa un agente AI. Cosa cambia per i marketer",
+    "fonte": "Google Blog / Future of Marketing",
+    "fonte_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+    "categoria": "Marketing",
+    "riassunto": "Al Google I/O del 20 maggio 2026, il VP Elizabeth Reid ha annunciato 'il più grande aggiornamento alla barra di ricerca in 25 anni': la search box ora accetta query conversazionali lunghe, e gli utenti possono creare agenti personali che monitorano topic autonomamente nel tempo. Il motore è ora alimentato da Gemini 3.5 Flash come modello default per l'AI Mode. Per i marketer, la svolta è strutturale: la visibilità non si misura più in posizioni SERP ma in 'citazioni' da parte dei sistemi AI. I brand che non compaiono nelle risposte generate dall'AI perdono traffico di discovery anche se mantengono il ranking tradizionale.",
+    "paywall": false
+  },
+  {
+    "id": 19,
+    "data": "2026-04-01",
+    "titolo": "Prada Group Q1 2026: ricavi +6% a 1,42 miliardi, Americas +22%. Versace a regime",
+    "fonte": "The Impression / Prada Group",
+    "fonte_url": "https://theimpression.com/prada-group-reports-q1-2026-revenue-growth/",
+    "categoria": "Luxury",
+    "riassunto": "Prada Group ha riportato ricavi netti di 1,42 miliardi di euro nel Q1 2026, in crescita del 6% anno su anno (o +14% a cambi costanti includendo Versace, acquisita a dicembre 2025). Le vendite retail a prezzo pieno continuano a essere il driver principale, a conferma della strategia di elevazione del brand. Le Americhe hanno guidato la crescita con +22% a 256 milioni. Versace ha contribuito 143 milioni e procede con il riposizionamento su full-price e qualità del retail. Miu Miu mantiene crescita 'solida' nonostante confronti difficili con il 2025.",
+    "paywall": false
+  },
+  {
+    "id": 20,
+    "data": "2026-06-01",
+    "titolo": "TikTok Shop proiettato a 112 miliardi di GMV nel 2026: Beauty è la categoria #1 negli USA",
+    "fonte": "Exploding Topics / AutoFaceless Research",
+    "fonte_url": "https://explodingtopics.com/blog/social-commerce",
+    "categoria": "Ecommerce",
+    "riassunto": "TikTok Shop ha raggiunto 66 miliardi di dollari di GMV globale nel 2025 e punta a 112 miliardi nel 2026, con vendite USA cresciute del 108% YoY a 15,82 miliardi. La piattaforma conta oltre 15 milioni di venditori attivi globalmente. Beauty & Personal Care è la categoria dominante con 2,49 miliardi di GMV negli USA. Il 60% delle vendite viene generato da video short-form, con conversion rate del 5-8% in-app — ben sopra la media ecommerce tradizionale. La compressione dei prezzi medi (intorno ai 20-50 dollari per transazione) posiziona TikTok Shop come canale mass-market, complementare al retail premium.",
+    "paywall": false
+  },
+  {
+    "id": 21,
+    "data": "2026-05-15",
+    "titolo": "AI Overviews Google riducono il traffico publisher del 15% ma i visitatori convertono il 42% meglio",
+    "fonte": "AuthorityTech / arXiv:2602.18455",
+    "fonte_url": "https://authoritytech.io/blog/google-ai-overviews-impact-seo-2026",
+    "categoria": "Marketing",
+    "riassunto": "Uno studio del 2026 su 46,5 milioni di osservazioni (NJIT/NTU, pubblicato su arXiv) ha misurato un calo del 15% nel traffico organico verso pagine web causato dagli AI Overviews di Google. Tuttavia, l'analisi Adobe su oltre 1 trilione di visite retail mostra che gli utenti provenienti da fonti AI convertono il 42% meglio, rimangono il 48% più a lungo e generano il 37% in più di revenue per visita. Il dato chiave per i marketer: la visibilità nei sistemi AI si guadagna con autorevolezza istituzionale, contenuto con dati concreti e affermazioni citabili — non con ottimizzazione tradizionale per keyword.",
+    "paywall": false
   }
 ]
