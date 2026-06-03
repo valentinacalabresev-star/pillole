@@ -253,5 +253,139 @@
       "url": "https://www.youtube.com/watch?v=sal78ACtGTc"
     },
     "livello": "avanzato"
+  },
+  {
+    "id": 29,
+    "data": "2026-06-03",
+    "categoria": "Brand Strategy",
+    "tipo": "testo",
+    "titolo": "Blue Ocean Strategy: come uscire dalla guerra dei prezzi",
+    "contenuto": "La Blue Ocean Strategy, sviluppata da W. Chan Kim e Renée Mauborgne alla INSEAD, parte da un'osservazione scomoda: la maggior parte delle aziende combatte nello stesso oceano rosso di sangue, riducendo margini e differenziazione in una guerra di attrito con i competitor. La strategia dell'oceano blu propone di smettere di competere dove tutti competono e di creare invece uno spazio di mercato incontestato.\n\nIl framework centrale si chiama Curva di Valore — uno strumento visivo che mappa i fattori su cui il settore compete e il livello di investimento di ogni player. L'analisi tipica rivela che i competitor tendono a convergere verso la stessa curva, spendendo risorse simili sulle stesse cose. La mossa strategica è ridisegnare quella curva: eliminare fattori dati per scontati ma poco valorizzati dai clienti, ridurre quelli su cui si compete oltre il necessario, alzare quelli che il mercato sotto-eroga, e creare fattori completamente nuovi.\n\nL'esempio più citato è Cirque du Soleil: non compete con altri circhi (no animali, no star internazionali) e non compete con il teatro tradizionale. Ha creato una categoria nuova — spettacolo di alta fascia accessibile — che giustifica prezzi 5-10x superiori al circo classico.\n\nPer chi lavora in brand strategy, la domanda da farsi non è 'come possiamo fare meglio quello che già fanno tutti?' ma 'quali regole implicite del nostro settore possiamo mettere in discussione?'. La maggior parte delle aziende non ha bisogno di più budget — ha bisogno di una curva di valore diversa.",
+    "fonte": {
+      "nome": "Blue Ocean Strategy — W. Chan Kim, Renée Mauborgne (HBR Press, 2004, rev. 2015)",
+      "url": "https://www.blueoceanstrategy.com/"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 30,
+    "data": "2026-06-03",
+    "categoria": "AI",
+    "tipo": "testo",
+    "titolo": "AI Overviews di Google: cosa cambia davvero per la visibilità dei brand",
+    "contenuto": "Dal 2025 Google mostra AI Overviews — risposte sintetizzate dall'AI — in circa 1 ricerca su 5. Uno studio pubblicato nel 2026 su arXiv, condotto su 46,5 milioni di osservazioni, ha misurato un calo medio del 15% nel traffico organico verso le pagine citate. Ma la storia non finisce qui.\n\nL'analisi di Adobe su oltre 1 trilione di visite a siti retail mostra che gli utenti che arrivano da fonti AI convertono il 42% meglio, rimangono sul sito il 48% più a lungo e generano il 37% in più di revenue per visita. Il traffico diminuisce, ma è traffico molto più qualificato — chi arriva è già nella fase di decisione, non di esplorazione.\n\nCambia il meccanismo di selezione: l'AI non sceglie le fonti in base al ranking tradizionale, ma in base alla credibilità estratta — dichiarazioni chiare, autorevolezza istituzionale, aggiornamento recente, accessibilità ai crawler. Una pagina ottimizzata per le keyword ma priva di affermazioni concrete e citabili viene ignorata anche se è al primo posto nelle SERP tradizionali.\n\nImplicazione per i brand: la domanda non è più 'siamo al primo posto su Google?' ma 'un agente AI che ricerca la nostra categoria ci cita come risposta corretta?'. La visibilità si guadagna costruendo autorevolezza reale — contenuto denso di dati, case study verificabili, posizionamento chiaro su specifici problemi — non inseguendo volume di keyword.\n\nChi non misura ancora la propria presenza nelle risposte AI sta guidando al buio nel canale che cresce più velocemente nel marketing digitale.",
+    "fonte": {
+      "nome": "AuthorityTech — Google AI Overviews Impact on SEO 2026 / arXiv:2602.18455",
+      "url": "https://authoritytech.io/blog/google-ai-overviews-impact-seo-2026"
+    },
+    "livello": "avanzato"
+  },
+  {
+    "id": 31,
+    "data": "2026-06-03",
+    "categoria": "Neuromarketing",
+    "tipo": "testo",
+    "titolo": "Anchoring: perché il primo numero che vedi determina tutto il resto",
+    "contenuto": "L'anchoring è uno dei bias cognitivi più potenti e più sfruttati nel pricing e nella comunicazione commerciale. Descritto per la prima volta da Kahneman e Tversky nel 1974, consiste nel fatto che il cervello umano usa il primo numero o riferimento ricevuto come 'ancora' per valutare tutto ciò che segue — anche quando quell'ancora è completamente arbitraria.\n\nNell'esperimento originale, i partecipanti venivano esposti a un numero casuale (generato da una ruota girevole) e poi chiedevano di stimare la percentuale di paesi africani nell'ONU. Chi aveva visto il numero 65 dava stime significativamente più alte di chi aveva visto il numero 10. Il numero non aveva alcuna relazione logica con la domanda — eppure influenzava la risposta.\n\nIn ambito marketing, le applicazioni sono ovunque: il prezzo barrato ('era €400, ora €199') fa percepire il secondo numero come conveniente anche se €199 è il prezzo normale. La versione premium di un prodotto elencata per prima giustifica il prezzo della versione standard. Il pacchetto enterprise 'da €2.000/mese' fa apparire quello da €300 come accessibile.\n\nLa leva strategica: nel design di pricing, chi comunica per primo il riferimento controlla il frame della negoziazione. Nei pitch, presentare prima la dimensione del problema (es. 'il mercato perde €5 miliardi in inefficienze') radica l'ancora prima di presentare il costo della soluzione.\n\nConoscere l'anchoring non immunizza completamente da esso, ma rende possibile riconoscerlo — e progettarlo consapevolmente nei propri materiali.",
+    "fonte": {
+      "nome": "Judgment Under Uncertainty: Heuristics and Biases — Tversky & Kahneman (Science, 1974)",
+      "url": "https://www.science.org/doi/10.1126/science.185.4157.1124"
+    },
+    "livello": "base"
+  },
+  {
+    "id": 32,
+    "data": "2026-06-03",
+    "categoria": "Ecommerce",
+    "tipo": "testo",
+    "titolo": "TikTok Shop: come funziona il modello che sta riscrivendo l'ecommerce",
+    "contenuto": "TikTok Shop ha raggiunto 66 miliardi di dollari di GMV globale nel 2025 e punta a 112 miliardi nel 2026. Negli USA, le vendite sono cresciute del 108% anno su anno. Numeri che non si possono ignorare se lavori in ecommerce o brand strategy.\n\nIl modello è fondamentalmente diverso dall'ecommerce tradizionale. Non è search-driven (cerco un prodotto, lo compro) — è discovery-driven: il prodotto ti trova attraverso contenuto che stai guardando per intrattenimento. Il 60% delle vendite viene generato da video short-form. Il conversion rate in-app è tra il 5% e l'8%, significativamente superiore alla media ecommerce.\n\nLa categoria più venduta è Beauty & Personal Care (2,49 miliardi di dollari di GMV negli USA), seguita da abbigliamento e accessori. Per i brand beauty mid-range e accessibili, TikTok Shop è diventato il canale di acquisizione più efficiente in termini di costo per conversione.\n\nLa logica sottostante è quella del social proof accelerato: i creator testano i prodotti in modo autentico (o semi-autentico), l'algoritmo amplifica i contenuti con alta watch-time e basso skip rate, la combinazione di fiducia nel creator e facilità di acquisto in-app comprime il funnel a pochi secondi.\n\nLa criticità strategica per i brand premium è la compressione dei prezzi: il prezzo medio di transazione su TikTok Shop è nell'intorno dei 20-50 dollari. Non è il canale giusto per posizionamenti luxury, ma è essenziale per capire dove si forma l'opinion e come si muove la mass-market consumer.",
+    "fonte": {
+      "nome": "TikTok Shop Statistics 2026 — AutoFaceless / Exploding Topics",
+      "url": "https://autofaceless.ai/blog/tiktok-shop-statistics-2026"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 33,
+    "data": "2026-06-03",
+    "categoria": "Brand Strategy",
+    "tipo": "testo",
+    "titolo": "Jobs to be Done: perché le persone 'assumono' i prodotti come se fossero dipendenti",
+    "contenuto": "Jobs to be Done (JTBD) è un framework sviluppato da Clayton Christensen (Harvard Business School) che rovescia il modo tradizionale di pensare ai clienti. Invece di segmentare per demografica o psicografica, JTBD chiede: quale 'lavoro' sta cercando di fare il cliente quando compra questo prodotto? Quale problema vuole risolvere, quale progresso vuole compiere nella propria vita?\n\nL'esempio di Christensen più famoso riguarda i milkshake di McDonald's. Le analisi demografiche non riuscivano a spiegare chi li comprava e quando. Osservando il comportamento reale, il team scoprì che metà delle vendite avveniva la mattina presto, da persone sole in macchina. Il 'lavoro' non era 'voglio qualcosa di dolce' — era 'ho un lungo viaggio di 45 minuti davanti, ho bisogno di qualcosa che mi tenga compagnia e mi sazie senza sporcarmi'. Il competitor non era un altro milkshake, era una banana, un bagel, la noia.\n\nApplicato al marketing, JTBD sposta il focus dalla descrizione del cliente alla comprensione del contesto d'uso e della motivazione profonda. Le domande chiave sono: in quale momento specifico il cliente sente il bisogno? Cosa lo ha portato a cercare una soluzione? Cosa stava usando prima e perché non funzionava?\n\nPer chi lavora in brand e comunicazione, capire i JTBD cambia il tipo di contenuto da produrre: invece di descrivere feature, si racconta il progresso che il prodotto rende possibile. La differenza tra 'vendere un trapano' e 'vendere un buco nel muro'.",
+    "fonte": {
+      "nome": "Competing Against Luck — Clayton Christensen (Harper Business, 2016)",
+      "url": "https://www.christenseninstitute.org/jobs-to-be-done/"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 34,
+    "data": "2026-06-03",
+    "categoria": "Lusso",
+    "tipo": "testo",
+    "titolo": "Pricing del lusso: perché alzare i prezzi può aumentare le vendite",
+    "contenuto": "Nel mercato standard, domanda e prezzo sono inversamente correlati: più costa, meno se ne vende. Nel lusso, questa regola si capovolge — è il cosiddetto effetto Veblen, descritto dall'economista Thorstein Veblen nel 1899 nel concetto di 'consumo vistoso'.\n\nI beni Veblen — borse Hermès, orologi Patek Philippe, appartamenti nel 16° arrondissement — aumentano la propria domanda quando il prezzo sale, perché il prezzo stesso è parte del valore percepito. Non compri la Birkin per trasportare cose: compri il segnale sociale che essa trasmette. Un prezzo più basso non la renderebbe più accessibile — la renderebbe meno desiderabile.\n\nHermès ha sistematicamente alzato i prezzi delle sue borse iconic negli ultimi 15 anni (dal 2010 ad oggi la Birkin base è passata da circa €5.000 a oltre €10.000 in Europa), mantenendo o aumentando la lista d'attesa. La scarsità è gestita strategicamente — non per scarsità di materie prime, ma come meccanismo di esclusività.\n\nPer chi lavora in brand strategy, la lezione è che il pricing non è solo una variabile finanziaria: è comunicazione di posizionamento. Un'azienda che compete sul prezzo segnala che non ha altri vantaggi competitivi. Un brand che alza i prezzi e li sostiene con qualità e narrativa comunica esclusività e fiducia nel proprio valore.\n\nAttenzione però: l'effetto Veblen funziona solo se il brand ha già credibilità. Alzare i prezzi senza sostanza dietro è la ricetta per perdere sia clienti che reputazione.",
+    "fonte": {
+      "nome": "The Theory of the Leisure Class — Thorstein Veblen (1899) / Bain Luxury Study 2025",
+      "url": "https://www.bain.com/insights/finding-a-new-longevity-for-luxury/"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 35,
+    "data": "2026-06-03",
+    "categoria": "Comunicazione",
+    "tipo": "testo",
+    "titolo": "Pyramid Principle: strutturare i messaggi come i consulenti McKinsey",
+    "contenuto": "Il Pyramid Principle è una tecnica di comunicazione sviluppata da Barbara Minto negli anni '70 mentre lavorava in McKinsey. L'idea centrale è semplice e radicale: il messaggio principale va all'inizio, non alla fine.\n\nNella comunicazione ordinaria, le persone seguono la struttura del ragionamento: prima le premesse, poi i dati, poi la conclusione. Nel Pyramid Principle si inverte la sequenza: prima la risposta, poi il supporto. Questa struttura è chiamata SCQA: Situation (contesto che tutti conoscono), Complication (il problema che rompe l'equilibrio), Question (la domanda implicita che ne nasce), Answer (la tua risposta, subito).\n\nPerché funziona: chi legge o ascolta vuole sapere dove si vuole arrivare prima di investire attenzione nel percorso. Se la conclusione arriva alla fine, chi legge deve tenere in sospeso l'intero ragionamento senza sapere se vale la pena farlo. Mettere la risposta all'inizio permette al lettore di valutare subito la rilevanza e di usare il resto del contenuto per confermare o contestare.\n\nApplicazioni pratiche: email ai senior stakeholder (apri con la decisione o raccomandazione richiesta, poi il supporto), presentazioni executive (slide 1 = recommendation, non agenda), brief creativi, aggiornamenti di progetto. Il Pyramid Principle è lo standard implicito in consulenza strategica, investment banking e nei C-suite di aziende strutturate.\n\nLa forma da evitare: iniziare con 'Ciao, ti scrivo perché...' o 'Abbiamo analizzato X, Y e Z e quindi...' Se la risposta non è nelle prime 2 righe, stai strutturando per te — non per chi legge.",
+    "fonte": {
+      "nome": "The Minto Pyramid Principle — Barbara Minto (Pearson, 1987, ed. aggiornata 2002)",
+      "url": "https://www.barbaraminto.com/"
+    },
+    "livello": "base"
+  },
+  {
+    "id": 36,
+    "data": "2026-06-03",
+    "categoria": "AI",
+    "tipo": "video",
+    "titolo": "Come i marketer stanno davvero usando l'AI (non come pensano)",
+    "contenuto": "Seth Godin è uno dei voci più lucide e scomode sul marketing contemporaneo. In questo intervento, affronta l'uso dell'AI nel marketing da una prospettiva insolita: non come strumento per fare di più, ma come specchio che rivela cosa stiamo effettivamente facendo.\n\nGodin argomenta che l'AI amplifica ciò che già esiste — se usi l'AI per produrre contenuto mediocre più velocemente, ottieni più mediocrità più veloce. Il problema non è lo strumento, è la strategia (o la sua assenza). I brand che usano l'AI meglio non sono quelli con i team più tecnici, ma quelli con il pensiero strategico più chiaro: sanno cosa vogliono comunicare, a chi, e perché — e usano l'AI per eseguire quella chiarezza a scala.\n\nIl video tocca anche il tema della fiducia: in un'era di contenuto generato in massa, la scarsità si sposta sull'autenticità e sulla coerenza nel tempo. La voce del brand diventa un asset competitivo proprio perché è difficile da replicare.",
+    "video_id": "6GMNzGLkTd4",
+    "video_thumb": "https://img.youtube.com/vi/6GMNzGLkTd4/hqdefault.jpg",
+    "fonte": {
+      "nome": "Seth Godin — AI and the Future of Marketing (YouTube)",
+      "url": "https://www.youtube.com/watch?v=6GMNzGLkTd4"
+    },
+    "livello": "intermedio"
+  },
+  {
+    "id": 37,
+    "data": "2026-06-03",
+    "categoria": "Marketing",
+    "tipo": "video",
+    "titolo": "Come costruire un brand che dura: Simon Sinek sul Golden Circle",
+    "contenuto": "Il Golden Circle è il framework più influente degli ultimi 20 anni nel brand building e nella comunicazione strategica. Simon Sinek lo presentò nel 2009 in quello che è diventato uno dei TED Talk più visti di sempre (oltre 60 milioni di visualizzazioni).\n\nL'idea: la maggior parte delle aziende comunica dall'esterno verso l'interno — What (cosa facciamo), How (come lo facciamo), Why (perché lo facciamo, raramente). I brand più forti comunicano al contrario: partono dal Why. Apple non dice 'Facciamo computer' — dice 'Crediamo che le persone comuni possano sfidare lo status quo'. Il prodotto è la prova di quella credenza.\n\nPerché funziona a livello neurologico: il 'Why' attiva il sistema limbico, la parte del cervello associata alle decisioni emotive e alla fiducia. Il 'What' attiva la neocorteccia, responsabile del pensiero analitico ma non delle decisioni. Le persone non comprano cosa fai — comprano perché lo fai.\n\nPer chi lavora in brand strategy: il Golden Circle è uno strumento di diagnosi prima ancora che di comunicazione. Se non riesci a formulare in modo chiaro e genuino il 'Why' della tua azienda, la comunicazione sarà inevitabilmente generica. La chiarezza del perché è il prerequisito di qualsiasi strategia di contenuto o posizionamento efficace.",
+    "video_id": "qp0HIF3SfI4",
+    "video_thumb": "https://img.youtube.com/vi/qp0HIF3SfI4/hqdefault.jpg",
+    "fonte": {
+      "nome": "Simon Sinek — How Great Leaders Inspire Action (TED, 2009)",
+      "url": "https://www.youtube.com/watch?v=qp0HIF3SfI4"
+    },
+    "livello": "base"
+  },
+  {
+    "id": 38,
+    "data": "2026-06-03",
+    "categoria": "Business",
+    "tipo": "testo",
+    "titolo": "Strategia dell'Oceano Rosso vs. innovazione di categoria: quando scegliere cosa",
+    "contenuto": "Non tutte le aziende devono creare nuovi mercati. L'errore opposto alla mancanza di innovazione è inseguire differenziazione radicale quando il mercato esistente offre ancora margini da catturare con un'esecuzione superiore.\n\nLa distinzione utile è tra due tipi di vantaggio competitivo: la differenziazione verticale (sei meglio su una dimensione che tutti già valorizzano — qualità, velocità, prezzo) e la differenziazione orizzontale (sei diverso su una dimensione che ridefinisce il frame di scelta, come Blue Ocean o innovazione di categoria).\n\nQuale scegliere dipende dalla struttura del mercato. In mercati frammentati con bassa fidelizzazione e prodotti commodity, la differenziazione verticale su esecuzione ha ROI molto alto: puoi prendere quota semplicemente facendo meglio quello che fanno tutti. In mercati consolidati con player dominanti e alta fidelizzazione, la differenziazione verticale ti mette in competizione diretta con chi ha scale e risorse superiori — e di solito perdi.\n\nL'analisi da fare: qual è il switching cost del cliente tipo? Più è alto (abbonamenti, ecosystem lock-in, abitudine) più serve innovazione di categoria per spostarlo. Più è basso (commodity, nessuna ragione di restare), più basta un'esecuzione leggermente migliore.\n\nEsempio concreto: nei SaaS B2B a basso switching cost, spesso basta essere il 20% più veloci o il 30% più economici. Nella cosmesi di lusso, con anni di fidelizzazione al brand, serve una nuova categoria di prodotto o un'associazione valoriale radicalmente diversa per spostare anche solo il 5% della base clienti.",
+    "fonte": {
+      "nome": "Competitive Strategy — Michael Porter (Free Press, 1980) / Blue Ocean Strategy — Kim & Mauborgne",
+      "url": "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy"
+    },
+    "livello": "avanzato"
   }
 ]
